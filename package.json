@@ -1,0 +1,36 @@
+{
+  "name": "uofl-events-data-manager",
+  "version": "1.0.0",
+  "description": "A comprehensive data pipeline application that fetches, filters, and transforms event data from the University of Louisville Events API",
+  "main": "app.py",
+  "scripts": {
+    "start": "python app.py",
+    "test": "python test_api.py",
+    "deploy": "python deploy.py",
+    "install-deps": "pip install -r requirements.txt"
+  },
+  "keywords": [
+    "uofl",
+    "events",
+    "data-pipeline",
+    "flask",
+    "api",
+    "university-of-louisville"
+  ],
+  "author": "UofL Data Challenge Participant",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/uofl-data-challenge.git"
+  },
+  "homepage": "https://yourusername.github.io/uofl-data-challenge/",
+  "engines": {
+    "python": ">=3.7.0"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "flask": "^2.3.3",
+    "flask-cors": "^4.0.0",
+    "requests": "^2.31.0"
+  }
+}

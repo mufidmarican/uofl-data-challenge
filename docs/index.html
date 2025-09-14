@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UofL Events Data Manager - Demo</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏛️ UofL Events Data Manager</h1>
+            <p>Demo Version - Static GitHub Pages Deployment</p>
+        </header>
+
+        <div class="controls">
+            <button id="loadDemo" class="btn btn-primary">Load Demo Data</button>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search events by keyword...">
+                <button id="searchBtn" class="btn btn-accent">Search</button>
+            </div>
+        </div>
+
+        <div class="summary-section" id="summarySection" style="display: none;">
+            <h2>📊 Summary Statistics</h2>
+            <div class="summary-cards">
+                <div class="card">
+                    <h3>Total Events</h3>
+                    <span id="totalEvents" class="number">0</span>
+                </div>
+                <div class="card">
+                    <h3>Earliest Event</h3>
+                    <span id="earliestDate" class="date">-</span>
+                </div>
+                <div class="card">
+                    <h3>Latest Event</h3>
+                    <span id="latestDate" class="date">-</span>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <h3>Events by Location</h3>
+                <canvas id="locationChart"></canvas>
+            </div>
+        </div>
+
+        <div class="events-section" id="eventsSection" style="display: none;">
+            <h2>📅 Events List</h2>
+            <div class="events-controls">
+                <span id="eventsCount" class="events-count">0 events found</span>
+                <button id="exportJson" class="btn btn-small">Export JSON</button>
+            </div>
+            <div class="events-grid" id="eventsGrid">
+                <!-- Events will be populated here -->
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>ℹ️ About This Demo</h2>
+            <p>This is a static demonstration of the UofL Events Data Manager. The full application requires a Python backend to fetch live data from the UofL Events API.</p>
+            <p><strong>Features demonstrated:</strong></p>
+            <ul>
+                <li>Responsive design and modern UI</li>
+                <li>Data visualization with Chart.js</li>
+                <li>Search functionality</li>
+                <li>Export capabilities</li>
+            </ul>
+            <p><strong>To run the full application:</strong></p>
+            <ol>
+                <li>Clone the repository</li>
+                <li>Install dependencies: <code>pip install -r requirements.txt</code></li>
+                <li>Run the Flask app: <code>python app.py</code></li>
+                <li>Open <code>http://localhost:5000</code></li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Demo data
+        const demoEvents = [
+            {
+                eventID: 49356427000535,
+                title: "Compassionate Caregiving: Self-Care Workshop",
+                startDate: "2025-02-15 12:00",
+                location: "Student Center",
+                url: "#"
+            },
+            {
+                eventID: 49222825520117,
+                title: "School of Dentistry Open House",
+                startDate: "2025-02-20 09:00",
+                location: "School of Dentistry",
+                url: "#"
+            },
+            {
+                eventID: 49356427000536,
+                title: "AI and Machine Learning Seminar",
+                startDate: "2025-02-25 14:00",
+                location: "Engineering Building",
+                url: "#"
+            },
+            {
+                eventID: 49356427000537,
+                title: "Music Concert: Jazz Night",
+                startDate: "2025-03-01 19:00",
+                location: "School of Music",
+                url: "#"
+            },
+            {
+                eventID: 49356427000538,
+                title: "Research Symposium",
+                startDate: "2025-03-05 10:00",
+                location: "Library",
+                url: "#"
+            }
+        ];
+
+        let currentEvents = [];
+        let chart = null;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('loadDemo').addEventListener('click', loadDemoData);
+            document.getElementById('searchBtn').addEventListener('click', searchEvents);
+            document.getElementById('exportJson').addEventListener('click', exportData);
+            
+            document.getElementById('searchInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchEvents();
+                }
+            });
+        });
+
+        function loadDemoData() {
+            currentEvents = demoEvents;
+            displayEvents(currentEvents);
+            displaySummary();
+            showSuccess('Demo data loaded successfully!');
+        }
+
+        function searchEvents() {
+            const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+            if (!keyword) {
+                showError('Please enter a search keyword');
+                return;
+            }
+
+            const filtered = demoEvents.filter(event => 
+                event.title.toLowerCase().includes(keyword) || 
+                event.location.toLowerCase().includes(keyword)
+            );
+            
+            currentEvents = filtered;
+            displayEvents(filtered);
+            showSuccess(`Found ${filtered.length} events matching "${keyword}"`);
+        }
+
+        function displayEvents(events) {
+            const eventsSection = document.getElementById('eventsSection');
+            const eventsGrid = document.getElementById('eventsGrid');
+            const eventsCount = document.getElementById('eventsCount');
+            
+            eventsCount.textContent = `${events.length} events found`;
+            
+            if (events.length === 0) {
+                eventsGrid.innerHTML = '<p class="no-events">No events found matching your criteria.</p>';
+            } else {
+                eventsGrid.innerHTML = events.map(event => createEventCard(event)).join('');
+            }
+            
+            eventsSection.style.display = 'block';
+        }
+
+        function createEventCard(event) {
+            const startDate = new Date(event.startDate).toLocaleString();
+            
+            return `
+                <div class="event-card">
+                    <div class="event-title">${event.title}</div>
+                    <div class="event-date">📅 ${startDate}</div>
+                    <div class="event-location">📍 ${event.location}</div>
+                    <a href="${event.url}" class="event-url">View Event</a>
+                </div>
+            `;
+        }
+
+        function displaySummary() {
+            const summarySection = document.getElementById('summarySection');
+            
+            // Calculate summary
+            const totalEvents = demoEvents.length;
+            const dates = demoEvents.map(e => e.startDate).sort();
+            const earliestDate = dates[0];
+            const latestDate = dates[dates.length - 1];
+            
+            // Count by location
+            const locationCounts = {};
+            demoEvents.forEach(event => {
+                locationCounts[event.location] = (locationCounts[event.location] || 0) + 1;
+            });
+            
+            // Update summary cards
+            document.getElementById('totalEvents').textContent = totalEvents;
+            document.getElementById('earliestDate').textContent = new Date(earliestDate).toLocaleDateString();
+            document.getElementById('latestDate').textContent = new Date(latestDate).toLocaleDateString();
+            
+            // Create chart
+            createLocationChart(locationCounts);
+            
+            summarySection.style.display = 'block';
+        }
+
+        function createLocationChart(locationData) {
+            const ctx = document.getElementById('locationChart').getContext('2d');
+            
+            if (chart) {
+                chart.destroy();
+            }
+            
+            const locations = Object.keys(locationData);
+            const counts = Object.values(locationData);
+            
+            chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: locations,
+                    datasets: [{
+                        label: 'Number of Events',
+                        data: counts,
+                        backgroundColor: [
+                            '#667eea', '#764ba2', '#f093fb', '#f5576c', '#4facfe'
+                        ],
+                        borderColor: '#fff',
+                        borderWidth: 2,
+                        borderRadius: 8,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function exportData() {
+            if (currentEvents.length === 0) {
+                showError('No events to export. Please load demo data first.');
+                return;
+            }
+
+            const data = JSON.stringify(currentEvents, null, 2);
+            const blob = new Blob([data], { type: 'application/json' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'demo_events.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            
+            showSuccess('Data exported as demo_events.json');
+        }
+
+        function showError(message) {
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error';
+            errorDiv.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #f44336;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                z-index: 1000;
+                font-weight: 600;
+            `;
+            errorDiv.textContent = message;
+            document.body.appendChild(errorDiv);
+            
+            setTimeout(() => {
+                if (errorDiv.parentNode) {
+                    errorDiv.parentNode.removeChild(errorDiv);
+                }
+            }, 3000);
+        }
+
+        function showSuccess(message) {
+            const successDiv = document.createElement('div');
+            successDiv.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #4CAF50;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                z-index: 1000;
+                font-weight: 600;
+            `;
+            successDiv.textContent = message;
+            document.body.appendChild(successDiv);
+            
+            setTimeout(() => {
+                if (successDiv.parentNode) {
+                    successDiv.parentNode.removeChild(successDiv);
+                }
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

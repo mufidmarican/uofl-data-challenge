@@ -1,112 +1,103 @@
 #!/usr/bin/env python3
 """
-Test script to verify UofL Events API connection and data structure
+Simple test script to verify the UofL Events API functionality
 """
 
 import requests
 import json
 from datetime import datetime, timedelta
 
-def test_api_connection():
-    """Test the UofL Events API connection"""
+def test_uofl_api():
+    """Test the UofL Events API directly"""
+    print("🧪 Testing UofL Events API...")
+    
+    # Test basic API call
     api_url = "https://events.louisville.edu/api/2/events/"
     
-    print("Testing UofL Events API connection...")
-    print(f"API URL: {api_url}")
+    # Calculate date range
+    today = datetime.now()
+    end_date = today + timedelta(days=60)
+    
+    params = {
+        'pp': 10,  # Small number for testing
+        'days': 60,
+        'start': today.strftime('%Y-%m-%d'),
+        'end': end_date.strftime('%Y-%m-%d')
+    }
     
     try:
-        # Test basic connection
-        params = {
-            'pp': 5,  # Get only 5 events for testing
-            'page': 1,
-            'days': 60,
-            'format': 'json'
-        }
+        print(f"📡 Making request to: {api_url}")
+        print(f"📅 Date range: {params['start']} to {params['end']}")
         
         response = requests.get(api_url, params=params, timeout=30)
         response.raise_for_status()
         
         data = response.json()
         
-        print(f"✅ API Connection successful!")
-        print(f"Response status: {response.status_code}")
-        print(f"Events found: {len(data.get('events', []))}")
+        print(f"✅ API Response Status: {response.status_code}")
+        print(f"📊 Events returned: {len(data.get('events', []))}")
         
         if data.get('events'):
-            print("\n📋 Sample event structure:")
             sample_event = data['events'][0]
-            print(json.dumps(sample_event, indent=2)[:500] + "...")
-            
-            # Check required fields
-            event_data = sample_event.get('event', {})
-            required_fields = ['id', 'title', 'start_date', 'url']
-            
-            print(f"\n🔍 Checking required fields:")
-            for field in required_fields:
-                if field in event_data:
-                    print(f"  ✅ {field}: {event_data[field]}")
-                else:
-                    print(f"  ❌ {field}: Missing")
+            print(f"📝 Sample event title: {sample_event.get('event', {}).get('title', 'N/A')}")
+            print(f"📅 Sample event date: {sample_event.get('event', {}).get('start_date', 'N/A')}")
+            print(f"📍 Sample event location: {sample_event.get('event', {}).get('room_number', 'N/A')}")
         
         return True
         
     except requests.exceptions.RequestException as e:
-        print(f"❌ API Connection failed: {e}")
+        print(f"❌ API Error: {e}")
+        return False
+    except json.JSONDecodeError as e:
+        print(f"❌ JSON Decode Error: {e}")
         return False
     except Exception as e:
-        print(f"❌ Unexpected error: {e}")
+        print(f"❌ Unexpected Error: {e}")
         return False
 
-def test_data_filtering():
-    """Test data filtering logic"""
-    print("\n🧪 Testing data filtering logic...")
+def test_local_api():
+    """Test the local Flask API"""
+    print("\n🏠 Testing Local Flask API...")
     
-    # Sample data for testing
-    sample_events = [
-        {
-            'event': {
-                'id': 1,
-                'title': 'Regular Event',
-                'start_date': '2025-02-15T10:00:00Z',
-                'url': 'https://example.com/event1'
-            },
-            'series_id': None,  # Non-recurring
-            'recurring': False
-        },
-        {
-            'event': {
-                'id': 2,
-                'title': 'Recurring Event',
-                'start_date': '2025-02-20T14:00:00Z',
-                'url': 'https://example.com/event2'
-            },
-            'series_id': 123,  # Recurring
-            'recurring': True
-        }
-    ]
-    
-    # Filter non-recurring events
-    filtered = [event for event in sample_events 
-                if not event.get('series_id') and not event.get('recurring')]
-    
-    print(f"Original events: {len(sample_events)}")
-    print(f"Filtered events: {len(filtered)}")
-    print(f"✅ Filtering logic working correctly")
-    
-    return len(filtered) == 1
+    try:
+        # Test if Flask app is running
+        response = requests.get('http://localhost:5000/api/summary', timeout=10)
+        
+        if response.status_code == 200:
+            print("✅ Local API is running and responding")
+            data = response.json()
+            if data.get('success'):
+                print("✅ API returned successful response")
+                return True
+            else:
+                print(f"❌ API returned error: {data.get('error')}")
+                return False
+        else:
+            print(f"❌ API returned status code: {response.status_code}")
+            return False
+            
+    except requests.exceptions.ConnectionError:
+        print("❌ Cannot connect to local API. Make sure Flask app is running on port 5000")
+        return False
+    except Exception as e:
+        print(f"❌ Error testing local API: {e}")
+        return False
 
 if __name__ == "__main__":
-    print("🚀 UofL Events Manager - API Test")
+    print("🚀 UofL Events Data Manager - API Test Suite")
     print("=" * 50)
     
-    # Test API connection
-    api_success = test_api_connection()
+    # Test UofL API
+    uofl_success = test_uofl_api()
     
-    # Test filtering logic
-    filter_success = test_data_filtering()
+    # Test local API
+    local_success = test_local_api()
     
-    print("\n" + "=" * 50)
-    if api_success and filter_success:
-        print("🎉 All tests passed! The application should work correctly.")
+    print("\n📋 Test Results:")
+    print(f"UofL API: {'✅ PASS' if uofl_success else '❌ FAIL'}")
+    print(f"Local API: {'✅ PASS' if local_success else '❌ FAIL'}")
+    
+    if uofl_success and local_success:
+        print("\n🎉 All tests passed! The application is ready to use.")
     else:
-        print("⚠️  Some tests failed. Please check the issues above.")
+        print("\n⚠️  Some tests failed. Please check the errors above.")

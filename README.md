@@ -1,210 +1,134 @@
-# UofL Events Manager
+# UofL Events Data Manager
 
-A comprehensive web application for fetching, filtering, and managing University of Louisville events data from the UofL Events API. This project provides a clean, responsive interface for viewing events, generating reports, and exporting data.
+A comprehensive data pipeline application that fetches, filters, and transforms event data from the University of Louisville Events API. Built with Python Flask backend and responsive HTML/CSS/JavaScript frontend.
 
 ## 🚀 Features
 
 ### Core Functionality
-- **Event Fetching**: Automatically retrieves all events from the UofL Events API for the next 60 days
-- **Smart Filtering**: Excludes recurring/series events to show only unique events
-- **Data Transformation**: Converts event data to a clean, standardized format
-- **Real-time Search**: Search events by title or location with instant results
-- **Data Export**: Export events data as CSV or JSON files
+- **Data Fetching**: Retrieves all events from UofL Events API for the next 60 days
+- **Pagination Handling**: Automatically handles API pagination to ensure no events are missed
+- **Data Filtering**: Excludes recurring/series events, keeping only standalone events
+- **Data Transformation**: Converts data to standardized format with required fields only
+- **Multiple Export Formats**: Export data as JSON or CSV files
 
-### Dashboard Features
-- **Statistics Overview**: Total events, locations count, earliest/latest event dates
-- **Interactive Charts**: Bar chart visualization of events by location
-- **Responsive Design**: Mobile-first design that works on all devices
-- **Pagination**: Efficient browsing through large event datasets
-- **Real-time Updates**: Refresh data from the API with one click
+### Frontend Features
+- **Responsive Design**: Mobile-first approach with beautiful, modern UI
+- **Real-time Data Visualization**: Interactive bar chart showing events by location
+- **Search Functionality**: Keyword search across event titles and locations
+- **Summary Statistics**: Total events, date ranges, and location breakdowns
+- **Export Capabilities**: Download data directly from the browser
 
-### Technical Features
-- **REST API**: Clean API endpoints for data access and manipulation
-- **Error Handling**: Comprehensive error handling and user feedback
-- **Data Validation**: Ensures data integrity and proper formatting
-- **Logging**: Detailed logging for debugging and monitoring
+### API Endpoints
+- `GET /api/events` - Fetch and return all filtered events
+- `GET /api/events/search?q=keyword` - Search events by keyword
+- `GET /api/summary` - Get summary statistics
 
-## 🛠️ Tech Stack
+## 🛠️ Technical Stack
 
 ### Backend
-- **Python 3.8+**: Core programming language
-- **Flask**: Lightweight web framework for API development
-- **Pandas**: Data manipulation and analysis
-- **Requests**: HTTP library for API calls
-- **Gunicorn**: WSGI server for production deployment
+- **Python 3.7+**
+- **Flask** - Web framework
+- **Flask-CORS** - Cross-origin resource sharing
+- **Requests** - HTTP library for API calls
 
 ### Frontend
-- **HTML5**: Semantic markup structure
-- **CSS3**: Modern styling with Flexbox and Grid
-- **Vanilla JavaScript**: No frameworks, pure JavaScript for maximum compatibility
-- **Chart.js**: Interactive data visualization
-- **Font Awesome**: Icon library for enhanced UI
+- **HTML5** - Semantic markup
+- **CSS3** - Modern styling with gradients and animations
+- **Vanilla JavaScript** - No frameworks, pure JS for performance
+- **Chart.js** - Data visualization library
 
 ### Data Storage
-- **JSON Files**: Lightweight data storage
-- **CSV Export**: Spreadsheet-compatible data export
+- **JSON Files** - Local data storage
+- **CSV Files** - Tabular data export
 
-## 📋 Requirements Met
+## 📋 Requirements
 
-### Challenge Requirements ✅
-1. **Fetch Events**: Retrieves all events within next 60 days with pagination
-2. **Filter Events**: Excludes recurring/series events
-3. **Transform Data**: Keeps only required fields in ISO 8601 format
-4. **Useful Output**: Saves as CSV/JSON with comprehensive summary reports
-5. **Bonus Features**: 
-   - Interactive bar chart visualization
-   - Keyword search functionality
-   - Responsive mobile-first design
-
-### Technical Specifications ✅
-- **Backend**: Python with Flask framework
-- **Data Storage**: JSON file format
-- **REST API**: Complete API implementation
-- **Code Quality**: Clean, commented code with proper error handling
-- **Git Integration**: Ready for version control
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Python 3.8 or higher
+- Python 3.7 or higher
 - pip (Python package installer)
+- Modern web browser (Chrome, Firefox, Safari, Edge)
 
-### Installation
+## 🚀 Installation & Setup
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd uofl-data-challenge
-   ```
-
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Run the application**
-   ```bash
-   python app.py
-   ```
-
-4. **Access the application**
-   - Open your browser and go to `http://localhost:5000`
-   - The application will automatically fetch and display events
-
-### Alternative: Using Virtual Environment (Recommended)
-
+### 1. Clone the Repository
 ```bash
-# Create virtual environment
-python -m venv venv
+git clone <your-repository-url>
+cd uofl-data-challenge
+```
 
-# Activate virtual environment
-# On Windows:
-venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
-
-# Install dependencies
+### 2. Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
-# Run the application
+### 3. Run the Application
+```bash
 python app.py
 ```
 
-## 📖 API Endpoints
+The application will start on `http://localhost:5000`
 
-### Events Data
-- `GET /api/events` - Get all filtered events
-- `GET /api/events/summary` - Get events summary statistics
-- `GET /api/events/search?q=keyword` - Search events by keyword
-- `GET /api/events/refresh` - Refresh data from UofL API
+### 4. Access the Web Interface
+Open your browser and navigate to `http://localhost:5000`
 
-### Data Export
-- `GET /api/events/export/csv` - Export events as CSV
-- `GET /api/events/export/json` - Export events as JSON
+## 📖 Usage Guide
 
 ### Web Interface
-- `GET /` - Main dashboard interface
+1. **Fetch Events**: Click "Fetch Events" to retrieve data from the UofL API
+2. **View Summary**: Click "Show Summary" to see statistics and location chart
+3. **Search Events**: Use the search box to find events by keyword
+4. **Export Data**: Use "Export JSON" or "Export CSV" buttons to download data
 
-## 🎯 Usage Guide
+### API Usage
+```bash
+# Get all events
+curl http://localhost:5000/api/events
 
-### Dashboard Overview
-1. **Statistics Cards**: View total events, locations, and date ranges
-2. **Search Bar**: Search events by title or location
-3. **Action Buttons**: 
-   - Refresh data from API
-   - Export data as CSV or JSON
-4. **Events List**: Browse through paginated events
-5. **Location Chart**: Visualize event distribution by location
+# Search events
+curl "http://localhost:5000/api/events/search?q=music"
 
-### Searching Events
-- Type keywords in the search box
-- Press Enter or click Search
-- Use Clear button to reset search
-- Search works on both event titles and locations
+# Get summary statistics
+curl http://localhost:5000/api/summary
+```
 
-### Data Export
-- Click "Export CSV" to download events as spreadsheet
-- Click "Export JSON" to download events as JSON file
-- Files are generated in the application directory
+## 📊 Data Structure
 
-## 📊 Data Format
+### Input Data (from UofL API)
+The application fetches data from: `https://events.louisville.edu/api/2/events/`
 
-### Event Object Structure
+### Output Data Format
 ```json
 {
-    "eventID": 49356427000535,
-    "title": "Compassionate Caregiving: Self-Care",
-    "startDate": "2025-05-20 12:00",
-    "location": "The Center at Kentucky Highlands (London)",
-    "url": "https://centers.louisville.edu/form/clinical-trials-day-registration"
+  "eventID": 49356427000535,
+  "title": "Compassionate Caregiving: Self-Care",
+  "startDate": "2025-05-20 12:00",
+  "location": "The Center at Kentucky Highlands (London)",
+  "url": "https://centers.louisville.edu/form/clinical-trials-day-registration"
 }
 ```
 
-### Summary Report Structure
+### Summary Statistics
 ```json
 {
-    "total_events": 150,
-    "events_by_location": {
-        "Student Center": 45,
-        "Library": 32,
-        "TBD": 28
-    },
-    "earliest_date": "2025-01-15 09:00",
-    "latest_date": "2025-03-15 17:00"
+  "total_events": 150,
+  "events_by_location": {
+    "Student Center": 25,
+    "Library": 18,
+    "TBD": 12
+  },
+  "earliest_date": "2025-01-15 09:00",
+  "latest_date": "2025-03-15 17:00"
 }
 ```
 
 ## 🔧 Configuration
 
 ### Environment Variables
-The application can be configured using environment variables:
-
-- `FLASK_ENV`: Set to 'production' for production deployment
-- `PORT`: Port number for the application (default: 5000)
+- `FLASK_ENV` - Set to `development` for debug mode
+- `FLASK_DEBUG` - Set to `True` for auto-reload
 
 ### API Configuration
-- **Base URL**: `https://events.louisville.edu/api/2/events/`
-- **Date Range**: Next 60 days from current date
-- **Pagination**: 100 events per page
-- **Timeout**: 30 seconds for API requests
-
-## 🚀 Deployment
-
-### Local Development
-```bash
-python app.py
-```
-
-### Production Deployment
-```bash
-gunicorn -w 4 -b 0.0.0.0:5000 app:app
-```
-
-### GitHub Pages Deployment
-1. Push code to GitHub repository
-2. Enable GitHub Pages in repository settings
-3. Set source to main branch
-4. Access via GitHub Pages URL
+- `DAYS_AHEAD` - Number of days to fetch events for (default: 60)
+- `API_BASE_URL` - UofL Events API base URL
 
 ## 📁 Project Structure
 
@@ -214,38 +138,115 @@ uofl-data-challenge/
 ├── requirements.txt       # Python dependencies
 ├── README.md             # Project documentation
 ├── templates/
-│   └── index.html        # Main dashboard template
+│   └── index.html        # Main HTML template
 ├── static/
 │   ├── style.css         # CSS styles
 │   └── script.js         # Frontend JavaScript
-├── uofl_events.csv       # Generated CSV export
-├── uofl_events.json      # Generated JSON export
-└── .gitignore            # Git ignore file
+├── events_data.json      # Generated JSON data (after running)
+└── events_data.csv       # Generated CSV data (after running)
 ```
 
-## 🐛 Troubleshooting
+## 🎯 Challenge Requirements Met
 
-### Common Issues
+### ✅ Core Requirements
+- [x] Fetch events from UofL Events API
+- [x] Handle pagination to retrieve all events
+- [x] Filter out recurring/series events
+- [x] Transform data to include only required fields
+- [x] Save data as both JSON and CSV
+- [x] Generate summary report with statistics
 
-1. **API Connection Errors**
-   - Check internet connection
-   - Verify UofL Events API is accessible
-   - Check firewall settings
+### ✅ Technical Specifications
+- [x] Python backend with Flask framework
+- [x] JSON data storage
+- [x] REST API endpoints
+- [x] HTML, CSS, JavaScript frontend
+- [x] Responsive mobile-first design
+- [x] Clean, commented code
+- [x] Proper error handling and logging
+- [x] Git version control ready
 
-2. **Data Not Loading**
-   - Refresh the page
-   - Check browser console for errors
-   - Verify backend is running
+### ✅ Bonus Features
+- [x] Data visualization (bar chart of events by location)
+- [x] Keyword search functionality
+- [x] Modern, beautiful UI design
+- [x] Export functionality
+- [x] Real-time data fetching
 
-3. **Export Issues**
-   - Ensure write permissions in application directory
-   - Check available disk space
+## 🐛 Error Handling
 
-### Debug Mode
-Run with debug logging:
+The application includes comprehensive error handling for:
+- Network connectivity issues
+- API rate limiting
+- Invalid data formats
+- Missing required fields
+- File I/O operations
+
+## 🚀 Deployment
+
+### Local Development
 ```bash
-export FLASK_DEBUG=1
 python app.py
+```
+
+### Production Deployment
+For production deployment, consider using:
+- **Gunicorn** as WSGI server
+- **Nginx** as reverse proxy
+- **Docker** for containerization
+
+### GitHub Pages
+The frontend can be deployed to GitHub Pages by:
+1. Pushing the repository to GitHub
+2. Enabling GitHub Pages in repository settings
+3. Setting source to main branch
+
+## 📝 API Documentation
+
+### Endpoints
+
+#### GET /api/events
+Fetches all events from the UofL API and returns filtered, transformed data.
+
+**Response:**
+```json
+{
+  "success": true,
+  "data": [...],
+  "summary": {...}
+}
+```
+
+#### GET /api/events/search?q={keyword}
+Searches events by keyword in title or location.
+
+**Parameters:**
+- `q` (string): Search keyword
+
+**Response:**
+```json
+{
+  "success": true,
+  "data": [...],
+  "keyword": "music",
+  "count": 5
+}
+```
+
+#### GET /api/summary
+Returns summary statistics for all events.
+
+**Response:**
+```json
+{
+  "success": true,
+  "summary": {
+    "total_events": 150,
+    "events_by_location": {...},
+    "earliest_date": "...",
+    "latest_date": "..."
+  }
+}
 ```
 
 ## 🤝 Contributing
@@ -260,13 +261,13 @@ python app.py
 
 This project is created for the UofL Integrative Design and Development Data Manager Challenge.
 
-## 👥 Team
+## 👨‍💻 Author
 
-Developed for the University of Louisville IT Innovation team as part of the Data Manager Challenge.
+Created for the University of Louisville IT Innovation team challenge.
 
 ## 📞 Support
 
-For questions or issues, please contact the development team or create an issue in the repository.
+For questions or issues, please refer to the challenge documentation or contact the development team.
 
 ---
 

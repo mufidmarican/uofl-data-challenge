@@ -1,10 +1,14 @@
-from flask import Flask, jsonify, render_template, request
+"""
+UofL Data Manager Challenge - Backend API
+Fetches, filters, and transforms event data from UofL Events API
+"""
+
 import requests
-import pandas as pd
-from datetime import datetime, timedelta
 import json
-import os
-from typing import List, Dict, Any
+import csv
+from datetime import datetime, timedelta
+from flask import Flask, jsonify, render_template, request
+from flask_cors import CORS
 import logging
 
 # Configure logging
@@ -12,123 +16,120 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
+CORS(app)
 
-class UofLEventsManager:
-    """Manages fetching, filtering, and transforming UofL events data"""
+# Configuration
+API_BASE_URL = "https://events.louisville.edu/api/2/events/"
+DAYS_AHEAD = 60
+
+class EventDataManager:
+    """Manages fetching, filtering, and transforming event data"""
     
     def __init__(self):
-        self.api_base_url = "https://events.louisville.edu/api/2/events/"
-        self.events_data = []
+        self.events = []
         self.filtered_events = []
+    
+    def fetch_events(self):
+        """Fetch all events from the API with pagination handling"""
+        logger.info("Starting to fetch events from UofL API...")
         
-    def fetch_events(self) -> List[Dict[str, Any]]:
-        """Fetch all events from the UofL API with pagination"""
-        all_events = []
-        page = 1
-        per_page = 100
-        
-        # Calculate date range for next 60 days
+        # Calculate date range (next 60 days)
         today = datetime.now()
-        end_date = today + timedelta(days=60)
+        end_date = today + timedelta(days=DAYS_AHEAD)
         
-        logger.info(f"Fetching events from {today.strftime('%Y-%m-%d')} to {end_date.strftime('%Y-%m-%d')}")
+        params = {
+            'pp': 50,  # Results per page
+            'days': DAYS_AHEAD,
+            'start': today.strftime('%Y-%m-%d'),
+            'end': end_date.strftime('%Y-%m-%d')
+        }
+        
+        page = 1
+        all_events = []
         
         while True:
+            params['page'] = page
+            logger.info(f"Fetching page {page}...")
+            
             try:
-                # API parameters
-                params = {
-                    'pp': per_page,
-                    'page': page,
-                    'days': 60,  # Next 60 days
-                    'format': 'json'
-                }
-                
-                response = requests.get(self.api_base_url, params=params, timeout=30)
+                response = requests.get(API_BASE_URL, params=params, timeout=30)
                 response.raise_for_status()
-                
                 data = response.json()
                 
                 if not data.get('events'):
                     break
                     
-                events = data['events']
-                all_events.extend(events)
+                all_events.extend(data['events'])
+                logger.info(f"Retrieved {len(data['events'])} events from page {page}")
                 
-                logger.info(f"Fetched page {page}: {len(events)} events")
-                
-                # Check if we have more pages
-                if len(events) < per_page:
+                # Check if we've reached the last page
+                if len(data['events']) < params['pp']:
                     break
                     
                 page += 1
                 
             except requests.exceptions.RequestException as e:
-                logger.error(f"Error fetching events from API: {e}")
-                break
-            except Exception as e:
-                logger.error(f"Unexpected error: {e}")
+                logger.error(f"Error fetching page {page}: {e}")
                 break
         
-        logger.info(f"Total events fetched: {len(all_events)}")
-        self.events_data = all_events
-        return all_events
+        self.events = all_events
+        logger.info(f"Total events fetched: {len(self.events)}")
+        return self.events
     
-    def filter_events(self) -> List[Dict[str, Any]]:
+    def filter_events(self):
         """Filter events to include only non-recurring events"""
-        if not self.events_data:
-            self.fetch_events()
+        logger.info("Filtering events...")
         
         filtered = []
-        for event in self.events_data:
-            # Check if event is not recurring (no series_id or recurring pattern)
-            if not event.get('series_id') and not event.get('recurring'):
+        for event in self.events:
+            # Exclude recurring/series events
+            if not event.get('recurring', False) and not event.get('series', False):
                 filtered.append(event)
         
-        logger.info(f"Filtered events (non-recurring): {len(filtered)}")
         self.filtered_events = filtered
-        return filtered
+        logger.info(f"Filtered events: {len(self.filtered_events)} (removed {len(self.events) - len(self.filtered_events)} recurring events)")
+        return self.filtered_events
     
-    def transform_events(self) -> List[Dict[str, Any]]:
-        """Transform events to include only required fields in proper format"""
-        if not self.filtered_events:
-            self.filter_events()
+    def transform_events(self):
+        """Transform events to include only required fields"""
+        logger.info("Transforming event data...")
         
         transformed = []
         for event in self.filtered_events:
-            try:
-                # Parse and format start date
-                start_date_str = event.get('event', {}).get('start_date')
-                if start_date_str:
-                    # Parse the date and format to ISO 8601
-                    start_date = datetime.fromisoformat(start_date_str.replace('Z', '+00:00'))
-                    formatted_date = start_date.strftime('%Y-%m-%d %H:%M')
-                else:
-                    formatted_date = "TBD"
-                
-                # Extract location name or set to "TBD"
-                location = event.get('event', {}).get('room', {}).get('name', 'TBD')
-                if not location or location.strip() == '':
-                    location = "TBD"
-                
-                transformed_event = {
-                    'eventID': event.get('event', {}).get('id'),
-                    'title': event.get('event', {}).get('title', 'Untitled Event'),
-                    'startDate': formatted_date,
-                    'location': location,
-                    'url': event.get('event', {}).get('url', '')
-                }
-                
+            # Extract and format start date
+            start_date = event.get('event', {}).get('start_date')
+            if start_date:
+                # Convert to ISO 8601 format (YYYY-MM-DD HH:MM)
+                try:
+                    dt = datetime.fromisoformat(start_date.replace('Z', '+00:00'))
+                    formatted_date = dt.strftime('%Y-%m-%d %H:%M')
+                except:
+                    formatted_date = start_date
+            else:
+                formatted_date = None
+            
+            # Extract location name or set to "TBD"
+            location = event.get('event', {}).get('room_number') or \
+                      event.get('event', {}).get('location_name') or \
+                      event.get('event', {}).get('venue', {}).get('name') or "TBD"
+            
+            transformed_event = {
+                'eventID': event.get('event', {}).get('id'),
+                'title': event.get('event', {}).get('title'),
+                'startDate': formatted_date,
+                'location': location,
+                'url': event.get('event', {}).get('url')
+            }
+            
+            # Only include events with valid data
+            if transformed_event['eventID'] and transformed_event['title']:
                 transformed.append(transformed_event)
-                
-            except Exception as e:
-                logger.error(f"Error transforming event {event.get('event', {}).get('id')}: {e}")
-                continue
         
-        logger.info(f"Transformed events: {len(transformed)}")
+        logger.info(f"Transformed {len(transformed)} events")
         return transformed
     
-    def generate_summary_report(self, events: List[Dict[str, Any]]) -> Dict[str, Any]:
-        """Generate summary report with statistics"""
+    def generate_summary(self, events):
+        """Generate summary statistics"""
         if not events:
             return {
                 'total_events': 0,
@@ -145,18 +146,12 @@ class UofLEventsManager:
             location = event.get('location', 'TBD')
             location_counts[location] = location_counts.get(location, 0) + 1
             
-            # Parse dates for min/max calculation
-            start_date_str = event.get('startDate')
-            if start_date_str and start_date_str != 'TBD':
-                try:
-                    date_obj = datetime.strptime(start_date_str, '%Y-%m-%d %H:%M')
-                    dates.append(date_obj)
-                except ValueError:
-                    continue
+            if event.get('startDate'):
+                dates.append(event['startDate'])
         
         # Find earliest and latest dates
-        earliest_date = min(dates).strftime('%Y-%m-%d %H:%M') if dates else None
-        latest_date = max(dates).strftime('%Y-%m-%d %H:%M') if dates else None
+        earliest_date = min(dates) if dates else None
+        latest_date = max(dates) if dates else None
         
         return {
             'total_events': len(events),
@@ -165,162 +160,96 @@ class UofLEventsManager:
             'latest_date': latest_date
         }
     
-    def save_to_csv(self, events: List[Dict[str, Any]], filename: str = 'uofl_events.csv'):
-        """Save events to CSV file"""
-        df = pd.DataFrame(events)
-        df.to_csv(filename, index=False)
-        logger.info(f"Events saved to {filename}")
-        return filename
-    
-    def save_to_json(self, events: List[Dict[str, Any]], filename: str = 'uofl_events.json'):
+    def save_to_json(self, events, filename='events_data.json'):
         """Save events to JSON file"""
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(events, f, indent=2, ensure_ascii=False)
         logger.info(f"Events saved to {filename}")
-        return filename
+    
+    def save_to_csv(self, events, filename='events_data.csv'):
+        """Save events to CSV file"""
+        if not events:
+            return
+            
+        with open(filename, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=['eventID', 'title', 'startDate', 'location', 'url'])
+            writer.writeheader()
+            writer.writerows(events)
+        logger.info(f"Events saved to {filename}")
 
-# Initialize the events manager
-events_manager = UofLEventsManager()
+# Initialize data manager
+data_manager = EventDataManager()
 
 @app.route('/')
 def index():
-    """Serve the main dashboard page"""
+    """Serve the main frontend page"""
     return render_template('index.html')
 
-@app.route('/api/events')
+@app.route('/api/events', methods=['GET'])
 def get_events():
     """API endpoint to get all events"""
     try:
-        events = events_manager.transform_events()
+        # Fetch fresh data
+        events = data_manager.fetch_events()
+        filtered_events = data_manager.filter_events()
+        transformed_events = data_manager.transform_events()
+        
+        # Save to files
+        data_manager.save_to_json(transformed_events)
+        data_manager.save_to_csv(transformed_events)
+        
         return jsonify({
             'success': True,
-            'data': events,
-            'count': len(events)
+            'data': transformed_events,
+            'summary': data_manager.generate_summary(transformed_events)
         })
     except Exception as e:
         logger.error(f"Error in get_events: {e}")
-        return jsonify({
-            'success': False,
-            'error': str(e)
-        }), 500
+        return jsonify({'success': False, 'error': str(e)}), 500
 
-@app.route('/api/events/summary')
-def get_events_summary():
-    """API endpoint to get events summary"""
-    try:
-        events = events_manager.transform_events()
-        summary = events_manager.generate_summary_report(events)
-        return jsonify({
-            'success': True,
-            'summary': summary
-        })
-    except Exception as e:
-        logger.error(f"Error in get_events_summary: {e}")
-        return jsonify({
-            'success': False,
-            'error': str(e)
-        }), 500
-
-@app.route('/api/events/search')
+@app.route('/api/events/search', methods=['GET'])
 def search_events():
     """API endpoint to search events by keyword"""
     try:
         keyword = request.args.get('q', '').lower()
         if not keyword:
-            return jsonify({
-                'success': False,
-                'error': 'Search keyword required'
-            }), 400
+            return jsonify({'success': False, 'error': 'No search keyword provided'}), 400
         
-        events = events_manager.transform_events()
-        filtered_events = [
-            event for event in events
-            if keyword in event.get('title', '').lower() or 
-               keyword in event.get('location', '').lower()
-        ]
+        # Get current events
+        events = data_manager.fetch_events()
+        filtered_events = data_manager.filter_events()
+        transformed_events = data_manager.transform_events()
+        
+        # Filter by keyword
+        search_results = []
+        for event in transformed_events:
+            if (keyword in event.get('title', '').lower() or 
+                keyword in event.get('location', '').lower()):
+                search_results.append(event)
         
         return jsonify({
             'success': True,
-            'data': filtered_events,
-            'count': len(filtered_events),
-            'keyword': keyword
+            'data': search_results,
+            'keyword': keyword,
+            'count': len(search_results)
         })
     except Exception as e:
         logger.error(f"Error in search_events: {e}")
-        return jsonify({
-            'success': False,
-            'error': str(e)
-        }), 500
+        return jsonify({'success': False, 'error': str(e)}), 500
 
-@app.route('/api/events/refresh')
-def refresh_events():
-    """API endpoint to refresh events data from the API"""
+@app.route('/api/summary', methods=['GET'])
+def get_summary():
+    """API endpoint to get summary statistics"""
     try:
-        events_manager.fetch_events()
-        events = events_manager.transform_events()
+        events = data_manager.fetch_events()
+        filtered_events = data_manager.filter_events()
+        transformed_events = data_manager.transform_events()
         
-        # Save to files
-        events_manager.save_to_csv(events)
-        events_manager.save_to_json(events)
-        
-        return jsonify({
-            'success': True,
-            'message': f'Refreshed {len(events)} events',
-            'count': len(events)
-        })
+        summary = data_manager.generate_summary(transformed_events)
+        return jsonify({'success': True, 'summary': summary})
     except Exception as e:
-        logger.error(f"Error in refresh_events: {e}")
-        return jsonify({
-            'success': False,
-            'error': str(e)
-        }), 500
-
-@app.route('/api/events/export/csv')
-def export_csv():
-    """API endpoint to export events as CSV"""
-    try:
-        events = events_manager.transform_events()
-        filename = events_manager.save_to_csv(events)
-        return jsonify({
-            'success': True,
-            'filename': filename,
-            'message': 'CSV file generated successfully'
-        })
-    except Exception as e:
-        logger.error(f"Error in export_csv: {e}")
-        return jsonify({
-            'success': False,
-            'error': str(e)
-        }), 500
-
-@app.route('/api/events/export/json')
-def export_json():
-    """API endpoint to export events as JSON"""
-    try:
-        events = events_manager.transform_events()
-        filename = events_manager.save_to_json(events)
-        return jsonify({
-            'success': True,
-            'filename': filename,
-            'message': 'JSON file generated successfully'
-        })
-    except Exception as e:
-        logger.error(f"Error in export_json: {e}")
-        return jsonify({
-            'success': False,
-            'error': str(e)
-        }), 500
+        logger.error(f"Error in get_summary: {e}")
+        return jsonify({'success': False, 'error': str(e)}), 500
 
 if __name__ == '__main__':
-    # Initialize data on startup
-    try:
-        logger.info("Initializing UofL Events Manager...")
-        events_manager.fetch_events()
-        events = events_manager.transform_events()
-        events_manager.save_to_csv(events)
-        events_manager.save_to_json(events)
-        logger.info("Initialization complete!")
-    except Exception as e:
-        logger.error(f"Error during initialization: {e}")
-    
     app.run(debug=True, host='0.0.0.0', port=5000)
