@@ -1,7 +1,3 @@
-"""
-UofL Data Manager Challenge - Backend API
-Fetches, filters, and transforms event data from UofL Events API
-"""
 
 import requests
 import json

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./static/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./static/demo-data.js"></script>
 </head>
 <body>
     <div class="container">
@@ -15,13 +16,13 @@
                 <img src="./static/cardinal.jpg" alt="UofL Cardinals Logo" class="uofl-logo">
                 <div class="header-text">
                     <h1>UofL Events Data Manager</h1>
-                    <p>Fetching and analyzing University of Louisville events data</p>
+                    <p>Interactive demo of University of Louisville events data management</p>
                 </div>
             </div>
         </header>
 
         <div class="controls">
-            <button id="loadDemo" class="btn btn-primary">Load Demo Data</button>
+            <button id="loadDemo" class="btn btn-primary">Load UofL Events</button>
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Search events by keyword...">
                 <button id="searchBtn" class="btn btn-accent">Search</button>
@@ -64,16 +65,17 @@
 
         <div class="info-section">
             <h2>About This Application</h2>
-            <p>This is the UofL Events Data Manager - a comprehensive data pipeline application that fetches, filters, and transforms event data from the University of Louisville Events API.</p>
-            <p><strong>Key Features:</strong></p>
+            <p>This is a fully functional demo of the UofL Events Data Manager running on GitHub Pages. It showcases all the features using realistic UofL events data.</p>
+            <p><strong>Features Demonstrated:</strong></p>
             <ul>
-                <li>Real-time data fetching from UofL Events API</li>
-                <li>Interactive data visualization with Chart.js</li>
-                <li>Advanced search functionality</li>
-                <li>Export capabilities (JSON/CSV)</li>
-                <li>Responsive design with UofL branding</li>
-                <li>Mobile-first approach</li>
+                <li>✅ Event data loading and display</li>
+                <li>✅ Keyword search and filtering</li>
+                <li>✅ Interactive data visualization with Chart.js</li>
+                <li>✅ Data export capabilities (JSON/CSV)</li>
+                <li>✅ Responsive design with UofL branding</li>
+                <li>✅ Mobile-first approach</li>
             </ul>
+            <p><strong>For live UofL Events API integration:</strong> Run the Flask application locally using <code>python app.py</code></p>
             <p><strong>To run the full application locally:</strong></p>
             <ol>
                 <li>Clone the repository</li>

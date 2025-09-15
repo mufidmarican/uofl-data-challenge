@@ -9,7 +9,7 @@ class EventsManager {
     }
 
     initializeEventListeners() {
-        document.getElementById('fetchEvents').addEventListener('click', () => this.fetchEvents());
+        document.getElementById('loadDemo').addEventListener('click', () => this.fetchEvents());
         document.getElementById('showSummary').addEventListener('click', () => this.showSummary());
         document.getElementById('searchBtn').addEventListener('click', () => this.searchEvents());
         document.getElementById('exportJson').addEventListener('click', () => this.exportData('json'));
@@ -28,20 +28,16 @@ class EventsManager {
         this.hideError();
         
         try {
-            const response = await fetch('/api/events');
-            const data = await response.json();
+            // For GitHub Pages, use demo data instead of API calls
+            await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate loading
             
-            if (data.success) {
-                this.events = data.data;
-                this.summary = data.summary;
-                this.displayEvents(this.events);
-                this.showSummary();
-                this.showSuccess(`Successfully fetched ${this.events.length} events!`);
-            } else {
-                this.showError(data.error || 'Failed to fetch events');
-            }
+            this.events = DEMO_EVENTS;
+            this.summary = DEMO_SUMMARY;
+            this.displayEvents(this.events);
+            this.showSummary();
+            this.showSuccess(`Successfully loaded ${this.events.length} demo events!`);
         } catch (error) {
-            this.showError('Network error: ' + error.message);
+            this.showError('Error loading demo data: ' + error.message);
         } finally {
             this.showLoading(false);
         }
@@ -58,15 +54,16 @@ class EventsManager {
         this.hideError();
         
         try {
-            const response = await fetch(`/api/events/search?q=${encodeURIComponent(keyword)}`);
-            const data = await response.json();
+            // For GitHub Pages, search through demo data
+            await new Promise(resolve => setTimeout(resolve, 500)); // Simulate search delay
             
-            if (data.success) {
-                this.displayEvents(data.data);
-                this.showSuccess(`Found ${data.count} events matching "${keyword}"`);
-            } else {
-                this.showError(data.error || 'Search failed');
-            }
+            const filteredEvents = this.events.filter(event => 
+                event.title.toLowerCase().includes(keyword.toLowerCase()) ||
+                event.location.toLowerCase().includes(keyword.toLowerCase())
+            );
+            
+            this.displayEvents(filteredEvents);
+            this.showSuccess(`Found ${filteredEvents.length} events matching "${keyword}"`);
         } catch (error) {
             this.showError('Search error: ' + error.message);
         } finally {
@@ -76,20 +73,8 @@ class EventsManager {
 
     async showSummary() {
         if (!this.summary) {
-            try {
-                const response = await fetch('/api/summary');
-                const data = await response.json();
-                
-                if (data.success) {
-                    this.summary = data.summary;
-                } else {
-                    this.showError('Failed to load summary');
-                    return;
-                }
-            } catch (error) {
-                this.showError('Error loading summary: ' + error.message);
-                return;
-            }
+            // For GitHub Pages, use demo summary data
+            this.summary = DEMO_SUMMARY;
         }
 
         this.displaySummary();
