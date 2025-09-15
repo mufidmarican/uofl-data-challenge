@@ -15,29 +15,29 @@ This application addresses the UofL Integrative Design and Development Data Mana
 ##  Features
 
 ### Core Requirements 
-- [x] **API Integration**: Fetches events from `https://events.louisville.edu/api/2/events/`
-- [x] **Pagination Handling**: Automatically handles multiple pages of data
-- [x] **Date Filtering**: Retrieves events within the next 60 days
-- [x] **Event Filtering**: Excludes recurring/series events
-- [x] **Data Transformation**: Keeps only required fields (ID, Title, Date, Location, URL)
-- [x] **ISO 8601 Format**: Converts dates to YYYY-MM-DD HH:MM format
-- [x] **CSV Export**: Downloads cleaned data as CSV file
-- [x] **JSON Export**: Downloads data with metadata as JSON file
-- [x] **Summary Report**: Shows total events, date range, and location counts
+-  **API Integration**: Fetches events from `https://events.louisville.edu/api/2/events/`
+-  **Pagination Handling**: Automatically handles multiple pages of data
+-  **Date Filtering**: Retrieves events within the next 60 days
+-  **Event Filtering**: Excludes recurring/series events
+-  **Data Transformation**: Keeps only required fields (ID, Title, Date, Location, URL)
+-  **ISO 8601 Format**: Converts dates to YYYY-MM-DD HH:MM format
+-  **CSV Export**: Downloads cleaned data as CSV file
+-  **JSON Export**: Downloads data with metadata as JSON file
+-  **Summary Report**: Shows total events, date range, and location counts
 
 ### Bonus Features 
-- [x] **Data Visualization**: Interactive bar chart showing events per location
-- [x] **Keyword Search**: Search events by title or location
-- [x] **Responsive Design**: Mobile-first approach with modern UI
-- [x] **Real-time Status**: Loading indicators and status messages
-- [x] **Error Handling**: Comprehensive error handling and user feedback
+-  **Data Visualization**: Interactive bar chart showing events per location
+-  **Keyword Search**: Search events by title or location
+-  **Responsive Design**: Mobile-first approach with modern UI
+-  **Real-time Status**: Loading indicators and status messages
+-  **Error Handling**: Comprehensive error handling and user feedback
 
 ### Technical Features 🔧
-- [x] **CORS Handling**: Graceful handling of cross-origin requests
-- [x] **Modern JavaScript**: ES6+ features with class-based architecture
-- [x] **Chart.js Integration**: Professional data visualization
-- [x] **Responsive CSS**: Mobile-first design with CSS Grid and Flexbox
-- [x] **Accessibility**: Semantic HTML and keyboard navigation support
+-  **CORS Handling**: Graceful handling of cross-origin requests
+-  **Modern JavaScript**: ES6+ features with class-based architecture
+-  **Chart.js Integration**: Professional data visualization
+-  **Responsive CSS**: Mobile-first design with CSS Grid and Flexbox
+-  **Accessibility**: Semantic HTML and keyboard navigation support
 
 ##  Quick Start
 ### Option 1: Local Development
@@ -194,13 +194,9 @@ futureDate.setDate(today.getDate() + 60);
 
 ##  Challenge Requirements Compliance
 
-### ✅ Technical Specifications
+###  Technical Specifications
 - **Frontend**: HTML, CSS, JavaScript ✓
 - **Responsive Design**: Mobile-first approach ✓
 - **Code Quality**: Clean, commented code with error handling ✓
 - **Git Control**: Meaningful commit messages ✓
 
-
----
-
-**Built with ❤️ for the UofL IT Innovation Challenge**
