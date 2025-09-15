@@ -30,14 +30,66 @@ header {
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-header h1 {
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.uofl-logo {
+    width: 80px;
+    height: 80px;
+    background: #AD0000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cardinal-head {
+    width: 50px;
+    height: 50px;
+    background: #AD0000;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: relative;
+    border: 2px solid #000000;
+}
+
+.cardinal-head::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    border: 1px solid #000000;
+}
+
+.cardinal-head::after {
+    content: '';
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    width: 3px;
+    height: 3px;
+    background: #000000;
+    border-radius: 50%;
+}
+
+.header-text h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     font-weight: bold;
 }
 
-header p {
+.header-text p {
     font-size: 1.1rem;
     opacity: 0.95;
     font-weight: 500;
@@ -311,7 +363,22 @@ header p {
         padding: 15px;
     }
     
-    header h1 {
+    .logo-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .uofl-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .cardinal-head {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .header-text h1 {
         font-size: 2rem;
     }
     

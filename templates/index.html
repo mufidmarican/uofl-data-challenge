@@ -10,8 +10,15 @@
 <body>
     <div class="container">
         <header>
-            <h1>🏛️ UofL Events Data Manager</h1>
-            <p>Fetching and analyzing University of Louisville events data</p>
+            <div class="logo-container">
+                <div class="uofl-logo">
+                    <div class="cardinal-head"></div>
+                </div>
+                <div class="header-text">
+                    <h1>UofL Events Data Manager</h1>
+                    <p>Fetching and analyzing University of Louisville events data</p>
+                </div>
+            </div>
         </header>
 
         <div class="controls">
@@ -29,18 +36,18 @@
         </div>
 
         <div class="summary-section" id="summarySection" style="display: none;">
-            <h2>📊 Summary Statistics</h2>
+            <h2> Summary Statistics</h2>
             <div class="summary-cards">
                 <div class="card">
                     <h3>Total Events</h3>
                     <span id="totalEvents" class="number">0</span>
                 </div>
                 <div class="card">
-                    <h3>Earliest Event</h3>
+                    <h3>Earliest Date of Event</h3>
                     <span id="earliestDate" class="date">-</span>
                 </div>
                 <div class="card">
-                    <h3>Latest Event</h3>
+                    <h3>Latest Date of Event</h3>
                     <span id="latestDate" class="date">-</span>
                 </div>
             </div>
@@ -52,7 +59,7 @@
         </div>
 
         <div class="events-section" id="eventsSection" style="display: none;">
-            <h2>📅 Events List</h2>
+            <h2> Events List</h2>
             <div class="events-controls">
                 <span id="eventsCount" class="events-count">0 events found</span>
                 <button id="exportJson" class="btn btn-small">Export JSON</button>
@@ -64,7 +71,7 @@
         </div>
 
         <div class="error" id="errorSection" style="display: none;">
-            <h3>❌ Error</h3>
+            <h3> Error</h3>
             <p id="errorMessage"></p>
         </div>
     </div>

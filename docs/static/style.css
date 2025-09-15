@@ -107,12 +107,14 @@ header p {
 .btn-small {
     padding: 8px 16px;
     font-size: 0.9rem;
-    background: #9C27B0;
+    background: #AD0000;
     color: white;
+    border: 1px solid #AD0000;
 }
 
 .btn-small:hover {
-    background: #7B1FA2;
+    background: #8B0000;
+    border-color: #8B0000;
 }
 
 .search-container {

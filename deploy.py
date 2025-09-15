@@ -30,8 +30,8 @@ def create_static_version():
     # Create a simple API mock for demonstration
     create_api_mock(docs_dir)
     
-    print(f"✅ Static version created in {docs_dir}/")
-    print("📝 To deploy to GitHub Pages:")
+    print(f" Static version created in {docs_dir}/")
+    print(" To deploy to GitHub Pages:")
     print("   1. Push this repository to GitHub")
     print("   2. Go to repository Settings > Pages")
     print("   3. Set source to 'Deploy from a branch'")
@@ -65,7 +65,7 @@ def create_static_html(docs_dir):
         </div>
 
         <div class="summary-section" id="summarySection" style="display: none;">
-            <h2>📊 Summary Statistics</h2>
+            <h2> Summary Statistics</h2>
             <div class="summary-cards">
                 <div class="card">
                     <h3>Total Events</h3>
@@ -88,7 +88,7 @@ def create_static_html(docs_dir):
         </div>
 
         <div class="events-section" id="eventsSection" style="display: none;">
-            <h2>📅 Events List</h2>
+            <h2> Events List</h2>
             <div class="events-controls">
                 <span id="eventsCount" class="events-count">0 events found</span>
                 <button id="exportJson" class="btn btn-small">Export JSON</button>
@@ -99,7 +99,7 @@ def create_static_html(docs_dir):
         </div>
 
         <div class="info-section">
-            <h2>ℹ️ About This Demo</h2>
+            <h2>ℹAbout This Demo</h2>
             <p>This is a static demonstration of the UofL Events Data Manager. The full application requires a Python backend to fetch live data from the UofL Events API.</p>
             <p><strong>Features demonstrated:</strong></p>
             <ul>
@@ -219,8 +219,8 @@ def create_static_html(docs_dir):
             return `
                 <div class="event-card">
                     <div class="event-title">${event.title}</div>
-                    <div class="event-date">📅 ${startDate}</div>
-                    <div class="event-location">📍 ${event.location}</div>
+                    <div class="event-date"> ${startDate}</div>
+                    <div class="event-location"> ${event.location}</div>
                     <a href="${event.url}" class="event-url">View Event</a>
                 </div>
             `;
