@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UofL Events</title>
+    <link rel="icon" type="image/jpeg" href="cardinal.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="cardinal.jpg" alt="UofL Cardinal" class="cardinal-logo">
+                <div class="header-text">
+                    <h1>UofL Events Data Manager</h1>
+                    <p>Fetch, filter, and analyze University of Louisville events data</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="control-panel">
+            <div class="controls">
+                <button id="fetchBtn" class="btn btn-primary">Fetch Events</button>
+                <button id="exportCsvBtn" class="btn btn-secondary" disabled>Export CSV</button>
+                <button id="exportJsonBtn" class="btn btn-secondary" disabled>Export JSON</button>
+                <button id="generateReportBtn" class="btn btn-secondary" disabled>Generate Report</button>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search events by keyword..." disabled>
+                <button id="searchBtn" class="btn btn-outline" disabled>Search</button>
+            </div>
+        </section>
+
+     
+        <div id="loadingIndicator" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Fetching events from UofL API...</p>
+        </div>
+
+   
+        <div id="statusMessage" class="status-message hidden"></div>
+
+   
+        <section id="summaryReport" class="summary-report hidden">
+            <h2>Summary Report</h2>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3>Total Events</h3>
+                    <span id="totalEvents">0</span>
+                </div>
+                <div class="summary-card">
+                    <h3>Next Date of Event</h3>
+                    <span id="earliestEvent">-</span>
+                </div>
+                <div class="summary-card">
+                    <h3>Latest Date of Event</h3>
+                    <span id="latestEvent">-</span>
+                </div>
+            </div>
+            
+            <div class="visualizations-grid">
+                <div class="chart-section">
+                    <h3>Events by Location</h3>
+                    <div id="locationsChart" class="chart-container">
+                        <canvas id="locationsChartCanvas"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-section">
+                    <h3>Events by Date</h3>
+                    <div id="datesChart" class="chart-container">
+                        <canvas id="datesChartCanvas"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-section">
+                    <h3>Events by Hour</h3>
+                    <div id="hoursChart" class="chart-container">
+                        <canvas id="hoursChartCanvas"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-section">
+                    <h3>Events by Day of Week</h3>
+                    <div id="weekdayChart" class="chart-container">
+                        <canvas id="weekdayChartCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="eventsSection" class="events-section hidden">
+            <div class="events-header">
+                <h2>Events Data</h2>
+                <div class="view-controls">
+                    <button id="tableViewBtn" class="btn btn-outline active">Table View</button>
+                    <button id="cardViewBtn" class="btn btn-outline">Card View</button>
+                    <button id="timelineViewBtn" class="btn btn-outline">Timeline View</button>
+                </div>
+            </div>
+            
+      
+            <div id="tableView" class="view-container">
+                <div class="table-container">
+                    <table id="eventsTable">
+                        <thead>
+                            <tr>
+                                <th>Event ID</th>
+                                <th>Title</th>
+                                <th>Start Date/Time</th>
+                                <th>Location</th>
+                                <th>Event URL</th>
+                            </tr>
+                        </thead>
+                        <tbody id="eventsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+     
+            <div id="cardView" class="view-container hidden">
+                <div id="eventsCardContainer" class="events-grid">
+                </div>
+            </div>
+            
+  
+            <div id="timelineView" class="view-container hidden">
+                <div id="timelineContainer" class="timeline-container">
+                </div>
+            </div>
+        </section>
+
+ 
+        <section id="searchResults" class="search-results hidden">
+            <h2>Search Results</h2>
+            <div class="table-container">
+                <table id="searchTable">
+                    <thead>
+                        <tr>
+                            <th>Event ID</th>
+                            <th>Title</th>
+                            <th>Start Date/Time</th>
+                            <th>Location</th>
+                            <th>Event URL</th>
+                        </tr>
+                    </thead>
+                    <tbody id="searchTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 UofL Events Data Manager - Built for IT Innovation Challenge</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
