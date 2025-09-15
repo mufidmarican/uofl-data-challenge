@@ -96,21 +96,36 @@ class EventDataManager:
         
         transformed = []
         for event in self.filtered_events:
-            # Extract and format start date
-            start_date = event.get('event', {}).get('start_date')
+            # Extract and format start date from event_instances
+            start_date = None
+            event_instances = event.get('event', {}).get('event_instances', [])
+            if event_instances and len(event_instances) > 0:
+                start_date = event_instances[0].get('event_instance', {}).get('start')
+            
+            formatted_date = None
             if start_date:
                 # Convert to ISO 8601 format (YYYY-MM-DD HH:MM)
                 try:
-                    dt = datetime.fromisoformat(start_date.replace('Z', '+00:00'))
+                    # Handle timezone info and convert to local time
+                    if start_date.endswith('Z'):
+                        start_date = start_date[:-1] + '+00:00'
+                    elif '+' not in start_date and '-' in start_date[-6:]:
+                        # Already has timezone
+                        pass
+                    else:
+                        # Add timezone if missing
+                        start_date += '-04:00'  # Default to Eastern time
+                    
+                    dt = datetime.fromisoformat(start_date)
                     formatted_date = dt.strftime('%Y-%m-%d %H:%M')
-                except:
+                except Exception as e:
+                    logger.warning(f"Date parsing error for {start_date}: {e}")
                     formatted_date = start_date
-            else:
-                formatted_date = None
             
             # Extract location name or set to "TBD"
             location = event.get('event', {}).get('room_number') or \
                       event.get('event', {}).get('location_name') or \
+                      event.get('event', {}).get('location') or \
                       event.get('event', {}).get('venue', {}).get('name') or "TBD"
             
             transformed_event = {

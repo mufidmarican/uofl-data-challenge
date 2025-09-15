@@ -9,8 +9,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #000000;
+    background: linear-gradient(135deg, #AD0000 0%, #8B0000 100%);
     min-height: 100vh;
 }
 
@@ -24,17 +24,23 @@ header {
     text-align: center;
     margin-bottom: 30px;
     color: white;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-weight: bold;
 }
 
 header p {
     font-size: 1.1rem;
-    opacity: 0.9;
+    opacity: 0.95;
+    font-weight: 500;
 }
 
 .controls {
@@ -62,32 +68,39 @@ header p {
 }
 
 .btn-primary {
-    background: #4CAF50;
+    background: #AD0000;
     color: white;
+    border: 2px solid #AD0000;
 }
 
 .btn-primary:hover {
-    background: #45a049;
+    background: #8B0000;
+    border-color: #8B0000;
     transform: translateY(-2px);
 }
 
 .btn-secondary {
-    background: #2196F3;
+    background: #000000;
     color: white;
+    border: 2px solid #000000;
 }
 
 .btn-secondary:hover {
-    background: #1976D2;
+    background: #333333;
+    border-color: #333333;
     transform: translateY(-2px);
 }
 
 .btn-accent {
-    background: #FF9800;
-    color: white;
+    background: #FFFFFF;
+    color: #AD0000;
+    border: 2px solid #FFFFFF;
+    font-weight: 600;
 }
 
 .btn-accent:hover {
-    background: #F57C00;
+    background: #F5F5F5;
+    border-color: #F5F5F5;
     transform: translateY(-2px);
 }
 
@@ -167,12 +180,13 @@ header p {
 }
 
 .card {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #AD0000 0%, #8B0000 100%);
     color: white;
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card h3 {
@@ -230,7 +244,8 @@ header p {
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 4px solid #667eea;
+    border-left: 4px solid #AD0000;
+    border: 1px solid #E0E0E0;
 }
 
 .event-card:hover {
@@ -247,7 +262,7 @@ header p {
 }
 
 .event-date {
-    color: #667eea;
+    color: #AD0000;
     font-weight: 600;
     margin-bottom: 8px;
 }
@@ -260,17 +275,19 @@ header p {
 
 .event-url {
     display: inline-block;
-    background: #667eea;
+    background: #AD0000;
     color: white;
     padding: 8px 16px;
     border-radius: 6px;
     text-decoration: none;
     font-size: 0.9rem;
     transition: background 0.3s ease;
+    border: 1px solid #AD0000;
 }
 
 .event-url:hover {
-    background: #5a6fd8;
+    background: #8B0000;
+    border-color: #8B0000;
 }
 
 .error {

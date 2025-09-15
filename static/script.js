@@ -167,9 +167,9 @@ class EventsManager {
                     label: 'Number of Events',
                     data: sortedData.map(item => item.count),
                     backgroundColor: [
-                        '#667eea', '#764ba2', '#f093fb', '#f5576c',
-                        '#4facfe', '#00f2fe', '#43e97b', '#38f9d7',
-                        '#ffecd2', '#fcb69f'
+                        '#AD0000', '#8B0000', '#DC143C', '#B22222',
+                        '#000000', '#333333', '#666666', '#999999',
+                        '#CCCCCC', '#E0E0E0'
                     ],
                     borderColor: '#fff',
                     borderWidth: 2,

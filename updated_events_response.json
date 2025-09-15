@@ -1,0 +1,1787 @@
+{
+  "data": [
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-14 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-14 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 260773,
+      "location": "Comstock",
+      "startDate": "2025-09-14 15:00",
+      "title": "University Symphony Orchestra",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-15 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-15 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 50595372366575,
+      "location": "139",
+      "startDate": "2025-09-15 08:30",
+      "title": "Postdoc Appreciation Coffee & Conversation",
+      "url": ""
+    },
+    {
+      "eventID": 50383665414686,
+      "location": "TBD",
+      "startDate": "2025-09-15 11:30",
+      "title": "Compassionate Challenge Book Club",
+      "url": "https://delphi.louisville.edu/programs/book-club"
+    },
+    {
+      "eventID": 50594146466001,
+      "location": "HSC-A, 614",
+      "startDate": "2025-09-15 12:00",
+      "title": "Biochemistry Seminar - Dae-Sung Hwangbo, UL",
+      "url": ""
+    },
+    {
+      "eventID": 50445822944896,
+      "location": "Garden behind the building along the brick alley",
+      "startDate": "2025-09-15 15:00",
+      "title": "Fall Garden Gatherings at Urban & Public Affairs",
+      "url": "https://louisville.edu/sustainability/events/fall-garden-gatherings-2025"
+    },
+    {
+      "eventID": 50507549509859,
+      "location": "TBD",
+      "startDate": "2025-09-15 16:00",
+      "title": "Rock Your Linkedin Profile",
+      "url": "https://training.talent.linkedin.com/rock-your-profile"
+    },
+    {
+      "eventID": 243245,
+      "location": "Bird",
+      "startDate": "2025-09-15 19:00",
+      "title": "University Jazz Combos",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-16 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-16 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-09-16 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 50136857202941,
+      "location": "TBD",
+      "startDate": "2025-09-16 11:00",
+      "title": "Learning Cafe: Accommodation to Ally- Understanding Disability and Being an Ally",
+      "url": ""
+    },
+    {
+      "eventID": 48791482150383,
+      "location": "The Trager Institute",
+      "startDate": "2025-09-16 11:30",
+      "title": "Tai Chi: Master the Fundamentals",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/tai-chi"
+    },
+    {
+      "eventID": 50355565991111,
+      "location": "Ballroom",
+      "startDate": "2025-09-16 11:30",
+      "title": "Woodson Lecture: \"Confronting Firearm Injury and its Ripple Effects: Insights and Opportunities from the Field of Public Health\"",
+      "url": "https://louisville.edu/sphis/events/woodson-lecture-dean-megan-ranney-yale-school-of-public-health"
+    },
+    {
+      "eventID": 50517129120679,
+      "location": "Ballroom",
+      "startDate": "2025-09-16 13:00",
+      "title": "2025 Career & Internship Fair",
+      "url": "https://cardinalcareers-csm.symplicity.com/events/25FAC&I"
+    },
+    {
+      "eventID": 48791531778570,
+      "location": "The Trager Institute",
+      "startDate": "2025-09-16 13:00",
+      "title": "Gentle Yoga",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/yoga"
+    },
+    {
+      "eventID": 50295150701878,
+      "location": "TILL Classroom, 3rd. Fl of Ekstrom Library",
+      "startDate": "2025-09-16 13:00",
+      "title": "Navigating Teaching Challenges: Strategies for Constructive Classroom Dialogues",
+      "url": "https://delphi.louisville.edu/programs/navigating-challenges"
+    },
+    {
+      "eventID": 50568292467188,
+      "location": "TBD",
+      "startDate": "2025-09-16 15:30",
+      "title": "How to work with IRB",
+      "url": ""
+    },
+    {
+      "eventID": 50596075040444,
+      "location": "TBD",
+      "startDate": "2025-09-16 16:15",
+      "title": "Master of Science in Health Professions Education Virtual Info Session",
+      "url": ""
+    },
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-17 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-17 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 48854220607144,
+      "location": "Burhans Hall, Room 162-163",
+      "startDate": "2025-09-17 08:30",
+      "title": "AI Essentials for Leaders: A Strategic Roadmap to Understanding and Implementation",
+      "url": "https://www.enrole.com/louisville/jsp/session.jsp?sessionId=AIEXEC0925P1&courseId=AIEXEC&categoryId=9202E628"
+    },
+    {
+      "eventID": 50664581600120,
+      "location": "123",
+      "startDate": "2025-09-17 11:30",
+      "title": "HSC ULPA Leadership Lunch",
+      "url": ""
+    },
+    {
+      "eventID": 50596003968102,
+      "location": "TBD",
+      "startDate": "2025-09-17 12:00",
+      "title": "Learning Cafe: Power of Partnership - Using AI training",
+      "url": ""
+    },
+    {
+      "eventID": 50648711152603,
+      "location": "Homberger Library, HSC-A, 614",
+      "startDate": "2025-09-17 12:00",
+      "title": "ROCHE presented by Sequencing Tech Core, Biochemistry",
+      "url": ""
+    },
+    {
+      "eventID": 50569037970513,
+      "location": "HSC-A, 614",
+      "startDate": "2025-09-17 12:00",
+      "title": "Seminar by Roche",
+      "url": ""
+    },
+    {
+      "eventID": 50541058546706,
+      "location": "139",
+      "startDate": "2025-09-17 12:00",
+      "title": "The Individualized Major Information Session",
+      "url": "louisville.edu/liberalstudies"
+    },
+    {
+      "eventID": 50391589567020,
+      "location": "Classroom 336",
+      "startDate": "2025-09-17 12:15",
+      "title": "Networking for Introverts",
+      "url": ""
+    },
+    {
+      "eventID": 50716075911127,
+      "location": "The Ville Grill",
+      "startDate": "2025-09-17 17:45",
+      "title": "Carpooling to Waterfront Wednesday",
+      "url": "https://louisville.edu/sustainability/events/carpooling-to-waterfront-wednesday"
+    },
+    {
+      "eventID": 50596286439117,
+      "location": "TBD",
+      "startDate": "2025-09-17 18:00",
+      "title": "Master of Science in Social Work Virtual Info Session",
+      "url": ""
+    },
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-18 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-18 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-09-18 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 50028997298742,
+      "location": "Outside UofL School of Public Health & Information Sciences",
+      "startDate": "2025-09-18 10:30",
+      "title": "Gray Street Farmers Market",
+      "url": "https://louisville.edu/sphis/gsfm/home"
+    },
+    {
+      "eventID": 50640813270393,
+      "location": "TBD",
+      "startDate": "2025-09-18 11:30",
+      "title": "Doctor of Social Work Virtual Info Session\u202f",
+      "url": ""
+    },
+    {
+      "eventID": 48791511388971,
+      "location": "The Trager Institute",
+      "startDate": "2025-09-18 11:30",
+      "title": "Tai Chi: Refine Your Tai Chi Forms",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/tai-chi"
+    },
+    {
+      "eventID": 50445853026964,
+      "location": "Garden Commons at the northeast corner",
+      "startDate": "2025-09-18 12:00",
+      "title": "Fall Garden Gatherings at Garden Commons",
+      "url": "https://louisville.edu/sustainability/events/fall-garden-gatherings-2025"
+    },
+    {
+      "eventID": 50446382152976,
+      "location": "Garden Commons at the northeast corner",
+      "startDate": "2025-09-18 12:00",
+      "title": "Victory Gardening Then and Now",
+      "url": "https://louisville.edu/sustainability/events/victory-gardening-then-and-now"
+    },
+    {
+      "eventID": 50516318929455,
+      "location": "TILL Classroom, 3rd Fl., 302A",
+      "startDate": "2025-09-18 13:00",
+      "title": "Navigating Teaching Challenges: Embedding Critical Thinking into Everyday Instruction",
+      "url": "https://delphi.louisville.edu/programs/navigating-challenges"
+    },
+    {
+      "eventID": 50471859140512,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-09-18 13:00",
+      "title": "Teaching Circle",
+      "url": ""
+    },
+    {
+      "eventID": 49790866941772,
+      "location": "TBD",
+      "startDate": "2025-09-18 14:00",
+      "title": "School of Dentistry DMD Program Virtual Information Session",
+      "url": "https://forms.office.com/r/WtEJAqbhYG"
+    },
+    {
+      "eventID": 50595841518101,
+      "location": "University of Louisville, School of Nursing, Owensboro Extension",
+      "startDate": "2025-09-18 14:00",
+      "title": "UofL School of Nursing, Owensboro Extension, Information Session",
+      "url": ""
+    },
+    {
+      "eventID": 50647792460942,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-09-18 16:00",
+      "title": "Creative Writing Group - Writing in New Genres",
+      "url": "https://louisville.edu/writingcenter/for-students-1/creative-writing-groups"
+    },
+    {
+      "eventID": 50525064036617,
+      "location": "300",
+      "startDate": "2025-09-18 17:00",
+      "title": "Maloney XC ",
+      "url": "https://louisville.edu/philosophy/about/humphrey-colloquium  "
+    },
+    {
+      "eventID": 50507429140062,
+      "location": "TBD",
+      "startDate": "2025-09-18 18:00",
+      "title": "IT Certification Pathways Info session",
+      "url": "https://linktr.ee/ITCPInfoSessions"
+    },
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-19 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-19 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 50524526819249,
+      "location": "Center For Engaged Learning",
+      "startDate": "2025-09-19 11:00",
+      "title": "Being Human in the AI Era: Body As Virus",
+      "url": ""
+    },
+    {
+      "eventID": 50443996658335,
+      "location": "TBD",
+      "startDate": "2025-09-19 12:00",
+      "title": "Nutrition and Bone Health: What You Should Know",
+      "url": "https://iecho.org/public/program/PRGM17304779581567MUMJGBAD1"
+    },
+    {
+      "eventID": 50585846418394,
+      "location": "112",
+      "startDate": "2025-09-19 15:00",
+      "title": "Colloquium (Kevin Basemann): X to Z Ligands: Controlling Metal-Ligand Bond Polarization",
+      "url": "https://events.louisville.edu/event/colloquium-x-to-z-ligands-controlling-metal-ligand-bond-polarization"
+    },
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-20 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-20 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 50697465976268,
+      "location": "University Club & Alumni Center",
+      "startDate": "2025-09-20 10:00",
+      "title": "2025 Environmental Justice Conference",
+      "url": "https://louisville.edu/sustainability/events/2025-environmental-justice-conference"
+    },
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-21 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-21 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 736932,
+      "location": "Comstock",
+      "startDate": "2025-09-21 15:00",
+      "title": "University Wind Ensemble",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-22 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-22 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 50648748526824,
+      "location": "HSC-A, 614",
+      "startDate": "2025-09-22 12:00",
+      "title": "Biochemistry Seminar - Steven Cresawn, PhD, James Madison University",
+      "url": ""
+    },
+    {
+      "eventID": 50541518128510,
+      "location": "TBD",
+      "startDate": "2025-09-22 12:00",
+      "title": "Full-Time & Professional MBA Virtual Info Session",
+      "url": "https://apply.graduate.louisville.edu/register/?id=a30d4713-dfa7-4bb4-829e-ef19cf5d3e16"
+    },
+    {
+      "eventID": 50391703681560,
+      "location": "Classroom 336",
+      "startDate": "2025-09-22 12:15",
+      "title": "College of Business Career Week: Careers in Accounting",
+      "url": ""
+    },
+    {
+      "eventID": 50445822944896,
+      "location": "Garden behind the building along the brick alley",
+      "startDate": "2025-09-22 15:00",
+      "title": "Fall Garden Gatherings at Urban & Public Affairs",
+      "url": "https://louisville.edu/sustainability/events/fall-garden-gatherings-2025"
+    },
+    {
+      "eventID": 243245,
+      "location": "Bird",
+      "startDate": "2025-09-22 19:00",
+      "title": "University Jazz Combos",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-23 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-23 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-09-23 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 48791482150383,
+      "location": "The Trager Institute",
+      "startDate": "2025-09-23 11:30",
+      "title": "Tai Chi: Master the Fundamentals",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/tai-chi"
+    },
+    {
+      "eventID": 50391744425799,
+      "location": "Classroom 336",
+      "startDate": "2025-09-23 12:15",
+      "title": "College of Business Career Week: Careers in CIS",
+      "url": ""
+    },
+    {
+      "eventID": 50444058808622,
+      "location": "The Trager Institute",
+      "startDate": "2025-09-23 13:00",
+      "title": "Diabetes Self-Management Program",
+      "url": "https://uoflsom.az1.qualtrics.com/jfe/form/SV_0ifGKHDzJ4kKIjs"
+    },
+    {
+      "eventID": 48791531778570,
+      "location": "The Trager Institute",
+      "startDate": "2025-09-23 13:00",
+      "title": "Gentle Yoga",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/yoga"
+    },
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-24 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-24 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 50516323690835,
+      "location": "TILL Classroom, 3rd Fl., 302A",
+      "startDate": "2025-09-24 11:00",
+      "title": "Navigating Teaching Challenges: Embedding Critical Thinking into Everyday Instruction",
+      "url": "https://delphi.louisville.edu/programs/navigating-challenges"
+    },
+    {
+      "eventID": 50321444193267,
+      "location": "Student Collaboration Center",
+      "startDate": "2025-09-24 11:00",
+      "title": "School of Nursing CultureFest",
+      "url": ""
+    },
+    {
+      "eventID": 50541588091996,
+      "location": "TBD",
+      "startDate": "2025-09-24 12:00",
+      "title": "MS in Accountancy & Analytics Virtual Info Session",
+      "url": "https://apply.graduate.louisville.edu/register/?id=577b70c9-608a-421b-9c0d-b5d7adb359ee"
+    },
+    {
+      "eventID": 50391770811684,
+      "location": "Classroom 336",
+      "startDate": "2025-09-24 12:15",
+      "title": "College of Business Career Week: Careers in Hospitality",
+      "url": ""
+    },
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-25 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-25 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-09-25 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 50028997298742,
+      "location": "Outside UofL School of Public Health & Information Sciences",
+      "startDate": "2025-09-25 10:30",
+      "title": "Gray Street Farmers Market",
+      "url": "https://louisville.edu/sphis/gsfm/home"
+    },
+    {
+      "eventID": 48791511388971,
+      "location": "The Trager Institute",
+      "startDate": "2025-09-25 11:30",
+      "title": "Tai Chi: Refine Your Tai Chi Forms",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/tai-chi"
+    },
+    {
+      "eventID": 50445853026964,
+      "location": "Garden Commons at the northeast corner",
+      "startDate": "2025-09-25 12:00",
+      "title": "Fall Garden Gatherings at Garden Commons",
+      "url": "https://louisville.edu/sustainability/events/fall-garden-gatherings-2025"
+    },
+    {
+      "eventID": 50391849511731,
+      "location": "Classroom 336",
+      "startDate": "2025-09-25 12:15",
+      "title": "College of Business Career Week: Careers in Management",
+      "url": ""
+    },
+    {
+      "eventID": 50471859140512,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-09-25 13:00",
+      "title": "Teaching Circle",
+      "url": ""
+    },
+    {
+      "eventID": 48966596391573,
+      "location": "TBD",
+      "startDate": "2025-09-25 15:30",
+      "title": "Dental Hygiene Program Information Session",
+      "url": "https://www.signupgenius.com/go/9040a4ca9aa2ba5f58-dental2#/"
+    },
+    {
+      "eventID": 50647810664862,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-09-25 16:00",
+      "title": "Creative Writing Group - Coalition of Advanced Writers",
+      "url": "https://louisville.edu/writingcenter/for-students-1/creative-writing-groups"
+    },
+    {
+      "eventID": 49214767601000,
+      "location": "Bingham Humanities 205",
+      "startDate": "2025-09-25 16:00",
+      "title": "Scott Richard Lyons: The Trickster Reconsidered. Again. ",
+      "url": ""
+    },
+    {
+      "eventID": 50605884688594,
+      "location": "Kentucky Center for African American Heritage ",
+      "startDate": "2025-09-25 17:15",
+      "title": "Communication & Science",
+      "url": "https://www.eventbrite.com/e/communication-science-the-kickoff-to-the-science-forums-tickets-1632599171069?aff=oddtdtcreator"
+    },
+    {
+      "eventID": 50444080320943,
+      "location": "TBD",
+      "startDate": "2025-09-25 18:00",
+      "title": "Diabetes Self-Management Program",
+      "url": "https://uoflsom.az1.qualtrics.com/jfe/form/SV_0ifGKHDzJ4kKIjs"
+    },
+    {
+      "eventID": 50169788248259,
+      "location": "Comstock",
+      "startDate": "2025-09-25 19:30",
+      "title": "University Symphonic Band, Chamber Winds Louisville",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-26 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-26 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 50266850089738,
+      "location": "TBD",
+      "startDate": "2025-09-26 10:00",
+      "title": "Navigating Teaching Challenges: Policy Awareness for Educators",
+      "url": "https://cardmaillouisville.sharepoint.com/sites/CardinalCompass?e=1%3a75754c8892f3404bb363f7ccbc8b8ae0"
+    },
+    {
+      "eventID": 49978340241682,
+      "location": "Belknap Village North room 176 (now known as the Center for Belonging, Access & Engagement)",
+      "startDate": "2025-09-26 12:00",
+      "title": "EcoReps Lunch & Learn: Glean KY",
+      "url": "https://louisville.edu/sustainability/events/ecoreps-lunch-learn-glean-ky"
+    },
+    {
+      "eventID": 50667875600862,
+      "location": "TBD",
+      "startDate": "2025-09-26 13:00",
+      "title": "Learning Cafe: Motivate, Recognize and Energize Employees",
+      "url": ""
+    },
+    {
+      "eventID": 50649664828520,
+      "location": "Belknap Playhouse",
+      "startDate": "2025-09-26 19:30",
+      "title": "Blues for an Alabama Sky",
+      "url": "https://www.onthestage.tickets/show/university-of-louisville/684b1d8b3b483e0fa438550e"
+    },
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-27 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-27 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 50649664828520,
+      "location": "Belknap Playhouse",
+      "startDate": "2025-09-27 19:30",
+      "title": "Blues for an Alabama Sky",
+      "url": "https://www.onthestage.tickets/show/university-of-louisville/684b1d8b3b483e0fa438550e"
+    },
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-28 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-28 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 50649664828520,
+      "location": "Belknap Playhouse",
+      "startDate": "2025-09-28 14:00",
+      "title": "Blues for an Alabama Sky",
+      "url": "https://www.onthestage.tickets/show/university-of-louisville/684b1d8b3b483e0fa438550e"
+    },
+    {
+      "eventID": 50169790826695,
+      "location": "Comstock",
+      "startDate": "2025-09-28 19:30",
+      "title": "University Choirs: Singing Cardsmen, Women's Chorus",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-29 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-29 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 50417642842614,
+      "location": "Ballroom",
+      "startDate": "2025-09-29 09:00",
+      "title": "Elevating Student Success Symposium",
+      "url": ""
+    },
+    {
+      "eventID": 50383665414686,
+      "location": "TBD",
+      "startDate": "2025-09-29 11:30",
+      "title": "Compassionate Challenge Book Club",
+      "url": "https://delphi.louisville.edu/programs/book-club"
+    },
+    {
+      "eventID": 50648761876434,
+      "location": "HSC-A, 614",
+      "startDate": "2025-09-29 12:00",
+      "title": "Biochemistry Seminar - Adam Healey, PhD, University of Queensland",
+      "url": ""
+    },
+    {
+      "eventID": 50445822944896,
+      "location": "Garden behind the building along the brick alley",
+      "startDate": "2025-09-29 15:00",
+      "title": "Fall Garden Gatherings at Urban & Public Affairs",
+      "url": "https://louisville.edu/sustainability/events/fall-garden-gatherings-2025"
+    },
+    {
+      "eventID": 50507549509859,
+      "location": "TBD",
+      "startDate": "2025-09-29 16:00",
+      "title": "Rock Your Linkedin Profile",
+      "url": "https://training.talent.linkedin.com/rock-your-profile"
+    },
+    {
+      "eventID": 1523674,
+      "location": "Bird",
+      "startDate": "2025-09-29 19:00",
+      "title": "University Jazz Repertory Ensemble",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50200175335472,
+      "location": "university-wide",
+      "startDate": "2025-09-30 00:00",
+      "title": "Cards Commuter Challenge 2025",
+      "url": "https://louisville.edu/sustainability/events/cards-commuter-challenge-2025"
+    },
+    {
+      "eventID": 50200772390337,
+      "location": "University-wide",
+      "startDate": "2025-09-30 00:00",
+      "title": "Cycle September 2025",
+      "url": "https://louisville.edu/sustainability/events/cycle-september-2025"
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-09-30 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 50667944617023,
+      "location": "TBD",
+      "startDate": "2025-09-30 11:00",
+      "title": "Learning Cafe: Making The Most of a Multi-Generational Workforce",
+      "url": ""
+    },
+    {
+      "eventID": 48791482150383,
+      "location": "The Trager Institute",
+      "startDate": "2025-09-30 11:30",
+      "title": "Tai Chi: Master the Fundamentals",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/tai-chi"
+    },
+    {
+      "eventID": 50330204810917,
+      "location": "TILL Classroom, 3rd Fl., 302A",
+      "startDate": "2025-09-30 12:00",
+      "title": "AI Bytes: AI Writing Activities",
+      "url": ""
+    },
+    {
+      "eventID": 50541637621582,
+      "location": "TBD",
+      "startDate": "2025-09-30 12:00",
+      "title": "Innovation MBA Virtual Info Session",
+      "url": "https://apply.graduate.louisville.edu/register/?id=e2adc2ce-6eb5-4992-b826-014ff8c3cd3f "
+    },
+    {
+      "eventID": 50700444303412,
+      "location": "TBD",
+      "startDate": "2025-09-30 12:30",
+      "title": "Learning Cafe: What Matters Most at Work (and Beyond) - Exploring Your Values and Life Roles",
+      "url": ""
+    },
+    {
+      "eventID": 48791531778570,
+      "location": "The Trager Institute",
+      "startDate": "2025-09-30 13:00",
+      "title": "Gentle Yoga",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/yoga"
+    },
+    {
+      "eventID": 50649664828520,
+      "location": "Belknap Playhouse",
+      "startDate": "2025-10-01 10:00",
+      "title": "Blues for an Alabama Sky",
+      "url": "https://www.onthestage.tickets/show/university-of-louisville/684b1d8b3b483e0fa438550e"
+    },
+    {
+      "eventID": 50541681896732,
+      "location": "TBD",
+      "startDate": "2025-10-01 10:00",
+      "title": "MS in Business Analytics Virtual Info Session",
+      "url": "https://apply.graduate.louisville.edu/register/?id=22d90837-71bb-4dee-80da-6610a6b494b2"
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-02 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 48791511388971,
+      "location": "The Trager Institute",
+      "startDate": "2025-10-02 11:30",
+      "title": "Tai Chi: Refine Your Tai Chi Forms",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/tai-chi"
+    },
+    {
+      "eventID": 50445853026964,
+      "location": "Garden Commons at the northeast corner",
+      "startDate": "2025-10-02 12:00",
+      "title": "Fall Garden Gatherings at Garden Commons",
+      "url": "https://louisville.edu/sustainability/events/fall-garden-gatherings-2025"
+    },
+    {
+      "eventID": 50471859140512,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-02 13:00",
+      "title": "Teaching Circle",
+      "url": ""
+    },
+    {
+      "eventID": 50647792460942,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-02 16:00",
+      "title": "Creative Writing Group - Writing in New Genres",
+      "url": "https://louisville.edu/writingcenter/for-students-1/creative-writing-groups"
+    },
+    {
+      "eventID": 50411382633484,
+      "location": "Cressman Center for Visual Art",
+      "startDate": "2025-10-03 17:00",
+      "title": "Reception: Lost in the (re)Process: Cassidy Meurer and Shachaf Polakow",
+      "url": ""
+    },
+    {
+      "eventID": 50649664828520,
+      "location": "Belknap Playhouse",
+      "startDate": "2025-10-03 19:30",
+      "title": "Blues for an Alabama Sky",
+      "url": "https://www.onthestage.tickets/show/university-of-louisville/684b1d8b3b483e0fa438550e"
+    },
+    {
+      "eventID": 50649664828520,
+      "location": "Belknap Playhouse",
+      "startDate": "2025-10-04 19:30",
+      "title": "Blues for an Alabama Sky",
+      "url": "https://www.onthestage.tickets/show/university-of-louisville/684b1d8b3b483e0fa438550e"
+    },
+    {
+      "eventID": 50649664828520,
+      "location": "Belknap Playhouse",
+      "startDate": "2025-10-05 14:00",
+      "title": "Blues for an Alabama Sky",
+      "url": "https://www.onthestage.tickets/show/university-of-louisville/684b1d8b3b483e0fa438550e"
+    },
+    {
+      "eventID": 50275865372488,
+      "location": "TBD",
+      "startDate": "2025-10-06 11:00",
+      "title": "Introduction to Zotero",
+      "url": "https://louisville.libcal.com/event/15000316"
+    },
+    {
+      "eventID": 50444023906754,
+      "location": "TBD",
+      "startDate": "2025-10-06 12:00",
+      "title": "Caregiver Grief",
+      "url": "https://us02web.zoom.us/meeting/register/k7YAFOhhTdapJw_4nHnaNQ"
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-07 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 50479698230843,
+      "location": "TBD",
+      "startDate": "2025-10-07 11:00",
+      "title": "Graduate Programs Info Session for UofL Students",
+      "url": "https://apply.graduate.louisville.edu/register/session-2"
+    },
+    {
+      "eventID": 48791482150383,
+      "location": "The Trager Institute",
+      "startDate": "2025-10-07 11:30",
+      "title": "Tai Chi: Master the Fundamentals",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/tai-chi"
+    },
+    {
+      "eventID": 48791531778570,
+      "location": "The Trager Institute",
+      "startDate": "2025-10-07 13:00",
+      "title": "Gentle Yoga",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/yoga"
+    },
+    {
+      "eventID": 50391914061162,
+      "location": "Ulmer Career Center Interview Rooms",
+      "startDate": "2025-10-08 09:00",
+      "title": "College of Business: Mock Interview Days",
+      "url": ""
+    },
+    {
+      "eventID": 50726924055785,
+      "location": "TBD",
+      "startDate": "2025-10-08 15:00",
+      "title": "Why Wellness, Why Now?: Navigating the Impact of Faculty Wellbeing on Success, Students & Institutional Culture",
+      "url": ""
+    },
+    {
+      "eventID": 50391914061162,
+      "location": "Ulmer Career Center Interview Rooms",
+      "startDate": "2025-10-09 09:00",
+      "title": "College of Business: Mock Interview Days",
+      "url": ""
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-09 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 49603363008174,
+      "location": "TILL Classroom (3rd floor)",
+      "startDate": "2025-10-09 10:00",
+      "title": "Red Bird Training ",
+      "url": ""
+    },
+    {
+      "eventID": 48791511388971,
+      "location": "The Trager Institute",
+      "startDate": "2025-10-09 11:30",
+      "title": "Tai Chi: Refine Your Tai Chi Forms",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/tai-chi"
+    },
+    {
+      "eventID": 50445853026964,
+      "location": "Garden Commons at the northeast corner",
+      "startDate": "2025-10-09 12:00",
+      "title": "Fall Garden Gatherings at Garden Commons",
+      "url": "https://louisville.edu/sustainability/events/fall-garden-gatherings-2025"
+    },
+    {
+      "eventID": 50524043954083,
+      "location": "TBD",
+      "startDate": "2025-10-09 12:00",
+      "title": "S.M.A.R.T. Staff presents\u00a0A Game of Revelations (because everyone has a story worth telling)",
+      "url": ""
+    },
+    {
+      "eventID": 50471859140512,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-09 13:00",
+      "title": "Teaching Circle",
+      "url": ""
+    },
+    {
+      "eventID": 50647810664862,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-09 16:00",
+      "title": "Creative Writing Group - Coalition of Advanced Writers",
+      "url": "https://louisville.edu/writingcenter/for-students-1/creative-writing-groups"
+    },
+    {
+      "eventID": 50391914061162,
+      "location": "Ulmer Career Center Interview Rooms",
+      "startDate": "2025-10-10 09:00",
+      "title": "College of Business: Mock Interview Days",
+      "url": ""
+    },
+    {
+      "eventID": 50391946782751,
+      "location": "Classroom 336",
+      "startDate": "2025-10-13 11:30",
+      "title": "Career Fair Prep: From Hello to Hired",
+      "url": ""
+    },
+    {
+      "eventID": 50383665414686,
+      "location": "TBD",
+      "startDate": "2025-10-13 11:30",
+      "title": "Compassionate Challenge Book Club",
+      "url": "https://delphi.louisville.edu/programs/book-club"
+    },
+    {
+      "eventID": 50445822944896,
+      "location": "Garden behind the building along the brick alley",
+      "startDate": "2025-10-13 15:00",
+      "title": "Fall Garden Gatherings at Urban & Public Affairs",
+      "url": "https://louisville.edu/sustainability/events/fall-garden-gatherings-2025"
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-14 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 50585593704011,
+      "location": "Student Activities Center, SAC 116/117",
+      "startDate": "2025-10-14 11:00",
+      "title": "One Grand Idea: Developing Award Winning Undergraduate Research",
+      "url": "https://library.louisville.edu/researchaward"
+    },
+    {
+      "eventID": 48791482150383,
+      "location": "The Trager Institute",
+      "startDate": "2025-10-14 11:30",
+      "title": "Tai Chi: Master the Fundamentals",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/tai-chi"
+    },
+    {
+      "eventID": 48791531778570,
+      "location": "The Trager Institute",
+      "startDate": "2025-10-14 13:00",
+      "title": "Gentle Yoga",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/yoga"
+    },
+    {
+      "eventID": 419953,
+      "location": "Comstock",
+      "startDate": "2025-10-14 19:30",
+      "title": "University Jazz Ensemble I",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 49851673714023,
+      "location": "Ballrooom",
+      "startDate": "2025-10-15 11:30",
+      "title": "2025 Fall Business Internship and Career Fair",
+      "url": "https://cardinalcareers-csm.symplicity.com/events/d2e8797bf42df3867eb65482889ac5db/overview"
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-16 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 50216698806221,
+      "location": "Abell Administration Center, 1st floor foyer",
+      "startDate": "2025-10-16 10:00",
+      "title": "Health Sciences Campus (HSC) Tour Sign-up",
+      "url": ""
+    },
+    {
+      "eventID": 48791511388971,
+      "location": "The Trager Institute",
+      "startDate": "2025-10-16 11:30",
+      "title": "Tai Chi: Refine Your Tai Chi Forms",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/tai-chi"
+    },
+    {
+      "eventID": 50445853026964,
+      "location": "Garden Commons at the northeast corner",
+      "startDate": "2025-10-16 12:00",
+      "title": "Fall Garden Gatherings at Garden Commons",
+      "url": "https://louisville.edu/sustainability/events/fall-garden-gatherings-2025"
+    },
+    {
+      "eventID": 50471859140512,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-16 13:00",
+      "title": "Teaching Circle",
+      "url": ""
+    },
+    {
+      "eventID": 50647792460942,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-16 16:00",
+      "title": "Creative Writing Group - Writing in New Genres",
+      "url": "https://louisville.edu/writingcenter/for-students-1/creative-writing-groups"
+    },
+    {
+      "eventID": 50514771695104,
+      "location": "The Writing Center",
+      "startDate": "2025-10-16 18:00",
+      "title": "Axton Reading Series: Fiction Writer and Memoirist Hannah Pittard",
+      "url": "https://louisville.edu/axton"
+    },
+    {
+      "eventID": 42039434216933,
+      "location": "Comstock",
+      "startDate": "2025-10-16 19:30",
+      "title": "Music eX",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50506093518282,
+      "location": "TBD",
+      "startDate": "2025-10-17 10:30",
+      "title": "Beating Back the Mid-Term Slump: Increasing Learner Engagement",
+      "url": ""
+    },
+    {
+      "eventID": 50446079760255,
+      "location": "Garden Commons at the northeast corner",
+      "startDate": "2025-10-17 17:00",
+      "title": "Zero Waste Pumpkin Carving!",
+      "url": "https://louisville.edu/sustainability/events/zero-waste-pumpkin-carving-1"
+    },
+    {
+      "eventID": 47843614930013,
+      "location": "TBD",
+      "startDate": "2025-10-18 00:00",
+      "title": "Faculty Feed Podcast ",
+      "url": "https://podcasters.spotify.com/pod/show/hscfacdev/episodes/Embracing-Good-Stress-Unlocking-Growth-and-Wellness-with-Dr--Martin-Huecker-e2pq0t1"
+    },
+    {
+      "eventID": 50169795639509,
+      "location": "Comstock",
+      "startDate": "2025-10-18 18:00",
+      "title": "Guest Artist Recital: Steven Paul Spears, tenor",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50169785651383,
+      "location": "Comstock",
+      "startDate": "2025-10-19 19:30",
+      "title": "University Choirs: Chorale, University Chorus, Cardinal Singers",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50587412251338,
+      "location": "Ekstrom Library",
+      "startDate": "2025-10-20 09:30",
+      "title": "Ask Us About Open Access",
+      "url": "https://louisville.libcal.com/event/15260497"
+    },
+    {
+      "eventID": 50445822944896,
+      "location": "Garden behind the building along the brick alley",
+      "startDate": "2025-10-20 15:00",
+      "title": "Fall Garden Gatherings at Urban & Public Affairs",
+      "url": "https://louisville.edu/sustainability/events/fall-garden-gatherings-2025"
+    },
+    {
+      "eventID": 48966596391573,
+      "location": "TBD",
+      "startDate": "2025-10-20 15:30",
+      "title": "Dental Hygiene Program Information Session",
+      "url": "https://www.signupgenius.com/go/9040a4ca9aa2ba5f58-dental2#/"
+    },
+    {
+      "eventID": 41163992382934,
+      "location": "Bird",
+      "startDate": "2025-10-20 19:00",
+      "title": "Faculty Chamber Jazz",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 306400,
+      "location": "Comstock",
+      "startDate": "2025-10-20 19:30",
+      "title": "University Community Band",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-21 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 50383665414686,
+      "location": "TBD",
+      "startDate": "2025-10-21 11:30",
+      "title": "Compassionate Challenge Book Club",
+      "url": "https://delphi.louisville.edu/programs/book-club"
+    },
+    {
+      "eventID": 48791482150383,
+      "location": "The Trager Institute",
+      "startDate": "2025-10-21 11:30",
+      "title": "Tai Chi: Master the Fundamentals",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/tai-chi"
+    },
+    {
+      "eventID": 48791531778570,
+      "location": "The Trager Institute",
+      "startDate": "2025-10-21 13:00",
+      "title": "Gentle Yoga",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/yoga"
+    },
+    {
+      "eventID": 50276135032257,
+      "location": "PNC/Horn Auditorium, BS 106",
+      "startDate": "2025-10-21 16:30",
+      "title": "Trade and the US Economy: Separating Fact from Fiction",
+      "url": "UofLFreeEnterprise.org"
+    },
+    {
+      "eventID": 50729511856068,
+      "location": "TBD",
+      "startDate": "2025-10-22 11:00",
+      "title": "Learning Cafe: Growing Career Adaptability",
+      "url": ""
+    },
+    {
+      "eventID": 49076347753237,
+      "location": "TBD",
+      "startDate": "2025-10-22 12:00",
+      "title": "Master of Science in Biostatistics Info Session",
+      "url": ""
+    },
+    {
+      "eventID": 50587290182411,
+      "location": "TBD",
+      "startDate": "2025-10-22 12:00",
+      "title": "Publish Open Access With No APCs",
+      "url": "https://louisville.libcal.com/calendar/rai/oaw-25-apcs"
+    },
+    {
+      "eventID": 49790866941772,
+      "location": "TBD",
+      "startDate": "2025-10-22 12:00",
+      "title": "School of Dentistry DMD Program Virtual Information Session",
+      "url": "https://forms.office.com/r/WtEJAqbhYG"
+    },
+    {
+      "eventID": 50391977948236,
+      "location": "Classroom 336",
+      "startDate": "2025-10-22 12:15",
+      "title": "How your business degree can help you in Law School",
+      "url": ""
+    },
+    {
+      "eventID": 50577901988583,
+      "location": "TILL Classroom, 3rd Fl., 302A",
+      "startDate": "2025-10-22 13:00",
+      "title": "AI Bytes: Assignment Design Studio",
+      "url": ""
+    },
+    {
+      "eventID": 50541712367916,
+      "location": "TBD",
+      "startDate": "2025-10-22 19:00",
+      "title": "MS in Accountancy & Analytics Virtual Info Session",
+      "url": "https://apply.graduate.louisville.edu/register/?id=dfb0e2eb-a3cf-4bfa-bca0-6db08a601274"
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-23 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 48791511388971,
+      "location": "The Trager Institute",
+      "startDate": "2025-10-23 11:30",
+      "title": "Tai Chi: Refine Your Tai Chi Forms",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/tai-chi"
+    },
+    {
+      "eventID": 50445853026964,
+      "location": "Garden Commons at the northeast corner",
+      "startDate": "2025-10-23 12:00",
+      "title": "Fall Garden Gatherings at Garden Commons",
+      "url": "https://louisville.edu/sustainability/events/fall-garden-gatherings-2025"
+    },
+    {
+      "eventID": 50471859140512,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-23 13:00",
+      "title": "Teaching Circle",
+      "url": ""
+    },
+    {
+      "eventID": 50647810664862,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-23 16:00",
+      "title": "Creative Writing Group - Coalition of Advanced Writers",
+      "url": "https://louisville.edu/writingcenter/for-students-1/creative-writing-groups"
+    },
+    {
+      "eventID": 50284932686186,
+      "location": "Chao Auditorium",
+      "startDate": "2025-10-23 18:00",
+      "title": "One Man\u2019s Freedom: Goldwater, King and the Struggle over an American Ideal",
+      "url": "McConnellCenter.org"
+    },
+    {
+      "eventID": 50151643060503,
+      "location": "101/102/Foyer",
+      "startDate": "2025-10-24 07:30",
+      "title": "2025 Cerebrovascular/Stroke Symposium & Brain Aneurysm Foundation 5k",
+      "url": "https://bit.ly/25cvstroke"
+    },
+    {
+      "eventID": 50047424317717,
+      "location": "Rooms 101/102/Foyer",
+      "startDate": "2025-10-24 07:30",
+      "title": "2025 CV/Stroke Symposium",
+      "url": ""
+    },
+    {
+      "eventID": 50029757938540,
+      "location": "21c Museum Hotel Louisville",
+      "startDate": "2025-10-24 08:00",
+      "title": "Orthodontics Alumni Council Annual Meeting",
+      "url": "https://www.uoflalumni.org/s/1157/19/alumni/interior.aspx?sid=1157&gid=1&pgid=9657&content_id=11835&authkey=WnKLOb5DgOc6PattFJxce8yXuOUy4bNR8fWs7wpnXIBaudjtbndfPQ%3d%3d"
+    },
+    {
+      "eventID": 50151643060503,
+      "location": "101/102/Foyer",
+      "startDate": "2025-10-25 08:30",
+      "title": "2025 Cerebrovascular/Stroke Symposium & Brain Aneurysm Foundation 5k",
+      "url": "https://bit.ly/25cvstroke"
+    },
+    {
+      "eventID": 50169799298271,
+      "location": "Comstock",
+      "startDate": "2025-10-26 15:00",
+      "title": "CMS: Jerusalem Quartet",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50585798711446,
+      "location": "University of Louisville Conference Center, Shelby Campus",
+      "startDate": "2025-10-27 10:00",
+      "title": "BCHEP Inaugural Conference",
+      "url": "https://forms.office.com/r/sqTdiAQQ0N"
+    },
+    {
+      "eventID": 50445822944896,
+      "location": "Garden behind the building along the brick alley",
+      "startDate": "2025-10-27 15:00",
+      "title": "Fall Garden Gatherings at Urban & Public Affairs",
+      "url": "https://louisville.edu/sustainability/events/fall-garden-gatherings-2025"
+    },
+    {
+      "eventID": 45775158374141,
+      "location": "Bird",
+      "startDate": "2025-10-27 19:00",
+      "title": "Faculty Jazz Ensemble",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-28 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 48791482150383,
+      "location": "The Trager Institute",
+      "startDate": "2025-10-28 11:30",
+      "title": "Tai Chi: Master the Fundamentals",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/tai-chi"
+    },
+    {
+      "eventID": 48791531778570,
+      "location": "The Trager Institute",
+      "startDate": "2025-10-28 13:00",
+      "title": "Gentle Yoga",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/yoga"
+    },
+    {
+      "eventID": 50392599822615,
+      "location": "TBD",
+      "startDate": "2025-10-28 16:00",
+      "title": "Ulmer AMA: Finding your Fit in the Job Search Process",
+      "url": ""
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-30 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 48791511388971,
+      "location": "The Trager Institute",
+      "startDate": "2025-10-30 11:30",
+      "title": "Tai Chi: Refine Your Tai Chi Forms",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/tai-chi"
+    },
+    {
+      "eventID": 50445853026964,
+      "location": "Garden Commons at the northeast corner",
+      "startDate": "2025-10-30 12:00",
+      "title": "Fall Garden Gatherings at Garden Commons",
+      "url": "https://louisville.edu/sustainability/events/fall-garden-gatherings-2025"
+    },
+    {
+      "eventID": 50524075757763,
+      "location": "TBD",
+      "startDate": "2025-10-30 12:30",
+      "title": "S.M.A.R.T. Staff presents\u00a0OneNote Unmasked: Organizing Doesn't Have to Be Scary!",
+      "url": ""
+    },
+    {
+      "eventID": 50471859140512,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-10-30 13:00",
+      "title": "Teaching Circle",
+      "url": ""
+    },
+    {
+      "eventID": 50423152211408,
+      "location": "176",
+      "startDate": "2025-10-31 12:00",
+      "title": "EcoReps Lunch & Learn: Industrial Composting with Smith Creek",
+      "url": "https://louisville.edu/sustainability/events/ecoreps-lunch-learn-industrial-composting-with-smith-creek"
+    },
+    {
+      "eventID": 492297,
+      "location": "Comstock",
+      "startDate": "2025-10-31 19:30",
+      "title": "University Symphony Orchestra Halloween Spooktacular",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50445822944896,
+      "location": "Garden behind the building along the brick alley",
+      "startDate": "2025-11-03 15:00",
+      "title": "Fall Garden Gatherings at Urban & Public Affairs",
+      "url": "https://louisville.edu/sustainability/events/fall-garden-gatherings-2025"
+    },
+    {
+      "eventID": 50169804076264,
+      "location": "Bird",
+      "startDate": "2025-11-03 19:30",
+      "title": "Electro-Acoustic Ensemble & Computer Music Studios",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-11-04 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 48791482150383,
+      "location": "The Trager Institute",
+      "startDate": "2025-11-04 11:30",
+      "title": "Tai Chi: Master the Fundamentals",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/tai-chi"
+    },
+    {
+      "eventID": 48791531778570,
+      "location": "The Trager Institute",
+      "startDate": "2025-11-04 13:00",
+      "title": "Gentle Yoga",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/yoga"
+    },
+    {
+      "eventID": 50541732524599,
+      "location": "TBD",
+      "startDate": "2025-11-04 19:00",
+      "title": "MS in Business Analytics Virtual Info Session",
+      "url": "https://apply.graduate.louisville.edu/register/?id=7ecabecb-7930-47b5-bc62-1484e46ba5ca "
+    },
+    {
+      "eventID": 50169806228716,
+      "location": "Comstock",
+      "startDate": "2025-11-04 19:30",
+      "title": "Chamber Music",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50275876517244,
+      "location": "TBD",
+      "startDate": "2025-11-05 13:00",
+      "title": "Introduction to Zotero",
+      "url": "https://louisville.libcal.com/event/15000333"
+    },
+    {
+      "eventID": 50284982765642,
+      "location": "Chao Auditorium",
+      "startDate": "2025-11-05 18:00",
+      "title": "The Story of Hunter S. Thompson: The Good Life Gone Awry ",
+      "url": "McConnellCenter.org"
+    },
+    {
+      "eventID": 50169808251120,
+      "location": "Comstock",
+      "startDate": "2025-11-05 19:30",
+      "title": "University Jazz Ensemble & Univ Symphonic Band",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-11-06 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 48791511388971,
+      "location": "The Trager Institute",
+      "startDate": "2025-11-06 11:30",
+      "title": "Tai Chi: Refine Your Tai Chi Forms",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/tai-chi"
+    },
+    {
+      "eventID": 50445853026964,
+      "location": "Garden Commons at the northeast corner",
+      "startDate": "2025-11-06 12:00",
+      "title": "Fall Garden Gatherings at Garden Commons",
+      "url": "https://louisville.edu/sustainability/events/fall-garden-gatherings-2025"
+    },
+    {
+      "eventID": 50471859140512,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-11-06 13:00",
+      "title": "Teaching Circle",
+      "url": ""
+    },
+    {
+      "eventID": 50647792460942,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-11-06 16:00",
+      "title": "Creative Writing Group - Writing in New Genres",
+      "url": "https://louisville.edu/writingcenter/for-students-1/creative-writing-groups"
+    },
+    {
+      "eventID": 50514802298721,
+      "location": "TBD",
+      "startDate": "2025-11-06 18:00",
+      "title": "Axton Reading Series: Poet Oliver Baez Bendorf",
+      "url": "https://louisville.edu/axton"
+    },
+    {
+      "eventID": 50541753514086,
+      "location": "TBD",
+      "startDate": "2025-11-06 19:00",
+      "title": "Full-Time & Professional MBA Virtual Info Session",
+      "url": "https://apply.graduate.louisville.edu/register/?id=cf60de1e-5e3c-46e8-892a-36b16171f92e   "
+    },
+    {
+      "eventID": 50169810124020,
+      "location": "Comstock",
+      "startDate": "2025-11-06 19:30",
+      "title": "University Choirs & New Music Ensemble",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50169812997368,
+      "location": "Comstock",
+      "startDate": "2025-11-07 19:30",
+      "title": "University Wind Ensemble & Univ Orchestra",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50169815530748,
+      "location": "Comstock",
+      "startDate": "2025-11-09 15:00",
+      "title": "CMS: Debussy Trio",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 48658024641639,
+      "location": "Ballroom ",
+      "startDate": "2025-11-10 11:30",
+      "title": "President's Veterans Day Lunch ",
+      "url": ""
+    },
+    {
+      "eventID": 49603348924659,
+      "location": "Ballroom ",
+      "startDate": "2025-11-10 11:30",
+      "title": "President's Veterans Day Lunch ",
+      "url": ""
+    },
+    {
+      "eventID": 50665698814368,
+      "location": "TILL Classroom, 3rd Fl., 302A",
+      "startDate": "2025-11-10 13:00",
+      "title": "AI Bytes: Assessing AI-Enhanced Work",
+      "url": ""
+    },
+    {
+      "eventID": 50445822944896,
+      "location": "Garden behind the building along the brick alley",
+      "startDate": "2025-11-10 15:00",
+      "title": "Fall Garden Gatherings at Urban & Public Affairs",
+      "url": "https://louisville.edu/sustainability/events/fall-garden-gatherings-2025"
+    },
+    {
+      "eventID": 243245,
+      "location": "Bird",
+      "startDate": "2025-11-10 19:00",
+      "title": "University Jazz Combos",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50471838781894,
+      "location": "Ekstrom Library, Room 132",
+      "startDate": "2025-11-11 09:00",
+      "title": "Dissertation and Thesis Mug Club ",
+      "url": ""
+    },
+    {
+      "eventID": 50543046585347,
+      "location": "TBD",
+      "startDate": "2025-11-11 11:00",
+      "title": "Graduate Programs Info Session for UofL Staff",
+      "url": "https://apply.graduate.louisville.edu/register/session-3"
+    },
+    {
+      "eventID": 48791531778570,
+      "location": "The Trager Institute",
+      "startDate": "2025-11-11 13:00",
+      "title": "Gentle Yoga",
+      "url": "https://centers.louisville.edu/aging/optimal-aging-clinic/wellness-and-lifestyle/yoga"
+    },
+    {
+      "eventID": 48966596391573,
+      "location": "TBD",
+      "startDate": "2025-11-11 15:30",
+      "title": "Dental Hygiene Program Information Session",
+      "url": "https://www.signupgenius.com/go/9040a4ca9aa2ba5f58-dental2#/"
+    },
+    {
+      "eventID": 419953,
+      "location": "Comstock",
+      "startDate": "2025-11-11 19:30",
+      "title": "University Jazz Ensemble I",
+      "url": "https://louisville.edu/music/concerts"
+    },
+    {
+      "eventID": 50524562734294,
+      "location": "Chao Auditorium",
+      "startDate": "2025-11-12 15:00",
+      "title": "Bingham Faculty Fellows: A Decade of Impact",
+      "url": ""
+    },
+    {
+      "eventID": 50541775225792,
+      "location": "TBD",
+      "startDate": "2025-11-12 19:00",
+      "title": "Innovation MBA Virtual Info Session",
+      "url": "https://apply.graduate.louisville.edu/register/?id=1a2a6486-43b2-4d9d-9e6a-9e45fe687466"
+    }
+  ],
+  "success": true,
+  "summary": {
+    "earliest_date": "2025-09-14 00:00",
+    "events_by_location": {
+      "101/102/Foyer": 2,
+      "112": 1,
+      "123": 1,
+      "139": 2,
+      "176": 1,
+      "21c Museum Hotel Louisville": 1,
+      "300": 1,
+      "Abell Administration Center, 1st floor foyer": 1,
+      "Ballroom": 3,
+      "Ballroom ": 2,
+      "Ballrooom": 1,
+      "Belknap Playhouse": 7,
+      "Belknap Village North room 176 (now known as the Center for Belonging, Access & Engagement)": 1,
+      "Bingham Humanities 205": 1,
+      "Bird": 7,
+      "Burhans Hall, Room 162-163": 1,
+      "Center For Engaged Learning": 1,
+      "Chao Auditorium": 3,
+      "Classroom 336": 7,
+      "Comstock": 17,
+      "Cressman Center for Visual Art": 1,
+      "Ekstrom Library": 1,
+      "Ekstrom Library, Room 132": 32,
+      "Garden Commons at the northeast corner": 10,
+      "Garden behind the building along the brick alley": 8,
+      "HSC-A, 614": 4,
+      "Homberger Library, HSC-A, 614": 1,
+      "Kentucky Center for African American Heritage ": 1,
+      "Outside UofL School of Public Health & Information Sciences": 2,
+      "PNC/Horn Auditorium, BS 106": 1,
+      "Rooms 101/102/Foyer": 1,
+      "Student Activities Center, SAC 116/117": 1,
+      "Student Collaboration Center": 1,
+      "TBD": 47,
+      "TILL Classroom (3rd floor)": 1,
+      "TILL Classroom, 3rd Fl., 302A": 5,
+      "TILL Classroom, 3rd. Fl of Ekstrom Library": 1,
+      "The Trager Institute": 26,
+      "The Ville Grill": 1,
+      "The Writing Center": 1,
+      "Ulmer Career Center Interview Rooms": 3,
+      "University Club & Alumni Center": 1,
+      "University of Louisville Conference Center, Shelby Campus": 1,
+      "University of Louisville, School of Nursing, Owensboro Extension": 1,
+      "University-wide": 17,
+      "university-wide": 17
+    },
+    "latest_date": "2025-11-12 19:00",
+    "total_events": 247
+  }
+}
