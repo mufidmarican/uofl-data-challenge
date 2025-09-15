@@ -32,7 +32,7 @@ This application addresses the UofL Integrative Design and Development Data Mana
 -  **Real-time Status**: Loading indicators and status messages
 -  **Error Handling**: Comprehensive error handling and user feedback
 
-### Technical Features 🔧
+### Technical Features 
 -  **CORS Handling**: Graceful handling of cross-origin requests
 -  **Modern JavaScript**: ES6+ features with class-based architecture
 -  **Chart.js Integration**: Professional data visualization
@@ -194,5 +194,6 @@ futureDate.setDate(today.getDate() + 60);
 - **Responsive Design**: Mobile-first approach ✓
 - **Code Quality**: Clean, commented code with error handling ✓
 - **Git Control**: Meaningful commit messages ✓
+
 
 
