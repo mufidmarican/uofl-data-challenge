@@ -11,9 +11,7 @@
     <div class="container">
         <header>
             <div class="logo-container">
-                <div class="uofl-logo">
-                    <div class="cardinal-head"></div>
-                </div>
+                <img src="static/uofl-logo.svg" alt="UofL Cardinals Logo" class="uofl-logo">
                 <div class="header-text">
                     <h1>UofL Events Data Manager</h1>
                     <p>Demo Version - Static GitHub Pages Deployment</p>
@@ -184,8 +182,8 @@
             return `
                 <div class="event-card">
                     <div class="event-title">${event.title}</div>
-                    <div class="event-date">📅 ${startDate}</div>
-                    <div class="event-location">📍 ${event.location}</div>
+                    <div class="event-date">${startDate}</div>
+                    <div class="event-location">${event.location}</div>
                     <a href="${event.url}" class="event-url">View Event</a>
                 </div>
             `;

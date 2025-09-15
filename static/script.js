@@ -119,8 +119,8 @@ class EventsManager {
         return `
             <div class="event-card">
                 <div class="event-title">${this.escapeHtml(event.title)}</div>
-                <div class="event-date">📅 ${startDate}</div>
-                <div class="event-location">📍 ${this.escapeHtml(location)}</div>
+                <div class="event-date">${startDate}</div>
+                <div class="event-location">${this.escapeHtml(location)}</div>
                 <a href="${url}" target="_blank" class="event-url">View Event</a>
             </div>
         `;
