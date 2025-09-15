@@ -41,13 +41,8 @@ This application addresses the UofL Integrative Design and Development Data Mana
 
 ##  Quick Start
 ### Option 1: Local Development
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/uofl-data-challenge.git
-   cd uofl-data-challenge
-   ```
 
-2. Open `index.html` in your web browser or use a local server:
+1. Open `index.html` in your web browser or use a local server:
    ```bash
    # Using Python
    python -m http.server 8000
@@ -59,7 +54,7 @@ This application addresses the UofL Integrative Design and Development Data Mana
    php -S localhost:8000
    ```
 
-3. Navigate to `http://localhost:8000` in your browser
+2. Navigate to `http://localhost:8000` in your browser
 
 ##  How to Use
 
@@ -199,4 +194,5 @@ futureDate.setDate(today.getDate() + 60);
 - **Responsive Design**: Mobile-first approach ✓
 - **Code Quality**: Clean, commented code with error handling ✓
 - **Git Control**: Meaningful commit messages ✓
+
 
